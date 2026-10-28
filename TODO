@@ -1,0 +1,48 @@
+
+* Homacs TODO File
+
+> This file is documented via human. AI shouldn't touch it.
+
+** Emacs 子进程模型开发                                               :spawn:
+
+   POC: 已实现用 busybox 替代默认 harmony shell。Dired/`shell` 功能已拓展
+
+** Arkts Gui.ets 代码重构                                                :ui:
+
+   Gui.ets 耦合太多功能，需要进一步解耦
+
+** Multi-frame 优化                                                  :frames:
+
+   Mulit-frame Emacs + API 已经支持，受限与 HMOS 窗管特性
+
+** Renderer 性能优化                                             :RIF:render:
+
+   - Kill cpu-copy 
+   - 对比 vsync drived VS producer drived
+   - damaged update 
+
+** 终端版本                                                              :nw:
+
+   历史 debug 版本支持 pty + term.js | 已弃用
+
+** Emacs 编译选项补齐                                             :configure:
+
+   - with-modules
+   - native-compile | limited JIT
+
+** Harmony for Emacs 
+
+   - 当前 PC only，拓展到 tablet phone
+   - 应用接续
+   - 碰一碰
+   - 小艺交互
+
+** Emacs for Harmony
+
+   - Emacs Elpa 适配
+
+** 测试系统构建                                                     :testing:
+
+   构建测试系统
+
+   

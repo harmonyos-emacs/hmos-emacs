@@ -1,0 +1,13 @@
+BasedOnStyle: GNU
+ColumnLimit: 80
+IndentWidth: 2
+UseTab: Never
+BreakBeforeBraces: GNU
+SpaceBeforeParens: Always
+SpaceAfterCStyleCast: true
+PointerAlignment: Right
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+SortIncludes: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1

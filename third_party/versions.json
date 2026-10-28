@@ -1,0 +1,185 @@
+{
+  "_comment": "Pinned third-party sources for the OHOS build. Every entry must carry a version, a URL and the sha256 of the archive; the build scripts in scripts/ verify them before unpacking.",
+  "libpng": {
+    "version": "1.6.44",
+    "url": "https://download.sourceforge.net/libpng/libpng-1.6.44.tar.gz",
+    "sha256": "8c25a7792099a0089fa1cc76c94260d0bb3f1ec52b93671b572f8bb61577b732",
+    "license": "libpng (zlib-like)",
+    "license_file": "LICENSE",
+    "build": "autotools",
+    "formats": [
+      "png"
+    ],
+    "depends": [
+      "zlib"
+    ]
+  },
+  "libxml2": {
+    "version": "2.12.10",
+    "url": "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.10.tar.xz",
+    "sha256": "c3d8c0c34aa39098f66576fe51969db12a5100b956233dc56506f7a8679be995",
+    "license": "MIT",
+    "license_file": "Copyright",
+    "build": "autotools",
+    "formats": [
+      "html parsing (libxml-parse-html-region / Eww)"
+    ],
+    "depends": [
+      "iconv (OHOS libc)"
+    ],
+    "configure": "--disable-shared --enable-static --without-python --without-lzma --without-zlib"
+  },
+  "sqlite3": {
+    "version": "3.54.1",
+    "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3540100.zip",
+    "sha256": "0a9c8e34352dad46006aa82836d5383bff9dc6bc9ce5a60553c05aa30e6ad1f9",
+    "sha3_256": "92281c86e2957f9b9305890f9ac04204caa7b677cc868dc326d942689df28e30",
+    "license": "Public Domain",
+    "license_file": "sqlite3.h (public domain dedication)",
+    "build": "amalgamation",
+    "formats": [
+      "sqlite3 (sqlite-open / sqlite-execute / sqlite-select)"
+    ],
+    "compile_flags": [
+      "-DSQLITE_THREADSAFE=1",
+      "-DSQLITE_ENABLE_COLUMN_METADATA=1",
+      "-DSQLITE_ENABLE_FTS5=1",
+      "-DSQLITE_ENABLE_RTREE=1",
+      "-DSQLITE_OMIT_LOAD_EXTENSION=1"
+    ],
+    "status": "loadable extensions are disabled on purpose: the app ships no dynamic Emacs modules and should not dlopen arbitrary code; sqlite-load-extension therefore reports SQLITE_ERROR"
+  },
+  "gmp": {
+    "version": "6.3.0",
+    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+    "sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
+    "license": "LGPL-3.0-or-later OR GPL-2.0-or-later",
+    "license_file": "COPYING.LESSERv3 / COPYINGv3 / COPYINGv2",
+    "build": "autotools",
+    "configure": [
+      "--disable-shared",
+      "--enable-static",
+      "--with-pic",
+      "--enable-cxx=no"
+    ],
+    "depends": []
+  },
+  "nettle": {
+    "version": "3.9.1",
+    "url": "https://ftp.gnu.org/gnu/nettle/nettle-3.9.1.tar.gz",
+    "sha256": "ccfeff981b0ca71bbd6fbcb054f407c60ffb644389a5be80d6716d5b550c6ce3",
+    "license": "LGPL-3.0-or-later OR GPL-2.0-or-later",
+    "license_file": "COPYING.LESSERv3 / COPYINGv3 / COPYINGv2",
+    "build": "autotools",
+    "configure": [
+      "--disable-shared",
+      "--enable-static",
+      "--disable-documentation",
+      "--disable-openssl"
+    ],
+    "depends": [
+      "gmp"
+    ]
+  },
+  "libtasn1": {
+    "version": "4.19.0",
+    "url": "https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz",
+    "sha256": "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a",
+    "license": "LGPL-2.1-or-later",
+    "license_file": "COPYING / LICENSING",
+    "build": "autotools",
+    "configure": [
+      "--disable-shared",
+      "--enable-static",
+      "--disable-doc"
+    ],
+    "depends": []
+  },
+  "libunistring": {
+    "version": "1.2",
+    "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.gz",
+    "sha256": "fd6d5662fa706487c48349a758b57bc149ce94ec6c30624ec9fdc473ceabbc8e",
+    "license": "LGPL-3.0-or-later OR GPL-3.0-or-later",
+    "license_file": "COPYING.LIB / COPYING",
+    "build": "autotools",
+    "configure": [
+      "--disable-shared",
+      "--enable-static"
+    ],
+    "depends": []
+  },
+  "ncurses": {
+    "version": "6.5",
+    "url": "https://ftp.gnu.org/gnu/ncurses/ncurses-6.5.tar.gz",
+    "sha256": "136d91bc269a9a5785e5f9e980bc76ab57428f604ce3e5a5a90cebc767971cc6",
+    "license": "MIT-style (X11)",
+    "license_file": "COPYING",
+    "build": "ncurses",
+    "configure_wide": [
+      "--without-shared",
+      "--with-termlib",
+      "--without-progs",
+      "--without-manpages",
+      "--without-ada",
+      "--without-cxx-binding",
+      "--disable-db-install",
+      "--without-debug",
+      "--enable-overwrite"
+    ],
+    "configure_narrow": [
+      "--without-shared",
+      "--disable-widec",
+      "--without-termlib",
+      "--without-progs",
+      "--without-manpages",
+      "--without-ada",
+      "--without-cxx-binding",
+      "--without-debug",
+      "--enable-overwrite"
+    ],
+    "depends": []
+  },
+  "gnutls": {
+    "version": "3.8.9",
+    "url": "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.9.tar.xz",
+    "sha256": "69e113d802d1670c4d5ac1b99040b1f2d5c7c05daec5003813c049b5184820ed",
+    "license": "LGPL-2.1-or-later OR GPL-3.0-or-later",
+    "license_file": "COPYING.LESSERv2 / COPYING",
+    "build": "autotools",
+    "configure": [
+      "--disable-shared",
+      "--enable-static",
+      "--without-p11-kit",
+      "--disable-libdane",
+      "--disable-tests",
+      "--disable-tools",
+      "--disable-doc",
+      "--disable-nls",
+      "--disable-guile",
+      "--disable-hardware-acceleration",
+      "--without-zstd",
+      "--without-brotli"
+    ],
+    "depends": [
+      "nettle",
+      "gmp",
+      "libtasn1",
+      "libunistring",
+      "zlib"
+    ]
+  },
+  "svg": {
+    "version": "nanosvg master 2026-11-04 (content pinned)",
+    "source": "https://github.com/memononen/nanosvg (src/nanosvg.h, src/nanosvgrast.h)",
+    "sha256": {
+      "nanosvg.h": "e34fd5d084be106cea972d19ce5d27fd96d17ba89f8d06bdceee058420c8b2b0",
+      "nanosvgrast.h": "79a9c5f4db19debf9f3a648a1589e96d92854f245a5cb4f3d823f263785234d8"
+    },
+    "license": "zlib-style (Mikko Mononen)",
+    "build": "vendored headers (committed, content pinned)",
+    "formats": [
+      "svg"
+    ],
+    "status": "chosen over librsvg (needs GLib/GTK stack + meson) and resvg (needs rustc); no external deps"
+  }
+}

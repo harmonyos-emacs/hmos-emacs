@@ -1,0 +1,6 @@
+{
+  global:
+    ohos_emacs_api;
+  local:
+    *;
+};

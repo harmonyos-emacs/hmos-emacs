@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.ets text eol=lf
+*.json5 text eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.so binary
+*.hap binary
+*.pdmp binary
+*.csr -text
+*.p12 binary
+*.p7b binary
+*.cer binary
+*.gz binary

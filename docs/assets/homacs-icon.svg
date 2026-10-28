@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#100a20"/>
+      <stop offset="1" stop-color="#2a184a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g opacity="0.10" stroke="#9678e6" stroke-width="1">
+    <path d="M0 64H1024M0 128H1024M0 192H1024M0 256H1024M0 320H1024M0 384H1024M0 448H1024M0 512H1024M0 576H1024M0 640H1024M0 704H1024M0 768H1024M0 832H1024M0 896H1024M0 960H1024"/>
+    <path d="M64 0V1024M128 0V1024M192 0V1024M256 0V1024M320 0V1024M384 0V1024M448 0V1024M512 0V1024M576 0V1024M640 0V1024M704 0V1024M768 0V1024M832 0V1024M896 0V1024M960 0V1024"/>
+  </g>
+  <!-- Lisp parentheses -->
+  <path d="M320 210C230 330 230 694 320 814" fill="none" stroke="#b096ff" stroke-opacity="0.45" stroke-width="15"/>
+  <path d="M704 210C794 330 794 694 704 814" fill="none" stroke="#b096ff" stroke-opacity="0.45" stroke-width="15"/>
+  <!-- Geometric E -->
+  <rect x="280" y="260" width="75" height="490" rx="20" fill="#f5f0ff"/>
+  <rect x="280" y="260" width="425" height="65" rx="18" fill="#f5f0ff"/>
+  <rect x="280" y="475" width="335" height="65" rx="18" fill="#f5f0ff"/>
+  <rect x="280" y="685" width="425" height="65" rx="18" fill="#f5f0ff"/>
+  <!-- cursor -->
+  <rect x="625" y="475" width="80" height="65" rx="14" fill="#ffb454"/>
+  <rect x="18" y="18" width="988" height="988" rx="45" fill="none" stroke="#ffffff" stroke-opacity="0.11" stroke-width="3"/>
+</svg>

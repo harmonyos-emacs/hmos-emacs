@@ -1,0 +1,38 @@
+Homacs - a native editor for HarmonyOS, based on GNU Emacs (unofficial port)
+Copyright (C) 2026 harmonyos-emacs contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program.  If not, see <https://www.gnu.org/licenses/>.
+
+This project is an unofficial port of GNU Emacs 31.1 to HarmonyOS.  The Emacs
+fork is maintained at https://github.com/harmonyos-emacs/emacs and includes
+modifications for the OHOS window system, input, rendering and runtime
+integration.  The application shell, ArkTS/C++ host bridge, build scripts and
+renderer are maintained at https://github.com/harmonyos-emacs/hmos-emacs.
+
+Corresponding source for the distributed HAP is the combination of both
+repositories plus the pinned third-party archives under third_party/src.
+
+This project is not affiliated with, endorsed by, or sponsored by the Free
+Software Foundation or the GNU project.
+
+The Homacs application icon under app/AppScope/resources/base/media/app_icon.png
+is original artwork created for this project.  Its SVG source is
+docs/assets/homacs-icon.svg.  It does not copy the official GNU Emacs swan
+logo; the Emacs attribution above applies to the Emacs code and runtime, not
+to this icon.
+
+"HarmonyOS" is a trademark of Huawei.  This project is not affiliated with,
+endorsed by, or sponsored by Huawei.  The name is used descriptively to
+describe the target platform.  GPLv3 does not grant trademark rights; product
+naming, icon, bundle identifier and store metadata require a separate
+trademark/official-endorsement review.

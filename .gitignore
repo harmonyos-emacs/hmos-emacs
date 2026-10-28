@@ -11,32 +11,39 @@
 /app/local.properties
 /app/.clangd
 
-# Generated native libraries (rebuild with scripts/build-libemacs.sh)
+# Generated native libraries (rebuild with scripts/clean-build.sh)
 /app/entry/libs/**/*.so
+/app/entry/libs/**/*.manifest.json
 
 # Generated runtime bundles (rebuild with scripts/pack-runtime.sh and
 # scripts/pack-home-init.sh)
 /app/entry/src/main/resources/rawfile/emacs-runtime.tar.gz
-/app/entry/src/main/resources/rawfile/home-init.tar.gz
+/app/entry/src/main/resources/rawfile/emacs-runtime.manifest.json
 
-# Emacs cross / host build trees
-/build-ohos/
-/build-host/
+# Build outputs: one deletable root (BUILD_ROOT, see scripts/env.sh).
+# /build*/ also covers legacy trees from before BUILD-UNIFIED.
+/build*/
+
+# Release artifacts
+/dist/
 
 # Local backups and scratch experiments
 /backup/
+/.emu-home/
 
 # Signing material: never commit private keys, keystores or provisioning
-# profiles.  See refs/DEPLOY-README.md for how to provision them.
+# profiles.  See docs/build-deploy.md for how to provision them.
 *.p12
 *.p7b
 *.keystore
 *.csr
-refs/*.p12
-refs/*.p7b
+refs/*
 
 # Downloaded skills (restored from skills-lock.json)
 /.agents/skills/
+
+# Tasks in Docs
+docs/tasks/
 
 # Python / tooling caches
 __pycache__/
@@ -59,3 +66,27 @@ Thumbs.db
 dump.stamp
 emacs-log.txt
 emacs-stderr.txt
+
+# Local build caches
+/.home/
+
+# Local GUI PoC evidence
+/artifacts/
+
+# Local caches
+/.hvigor-home/
+/.npm-cache/
+third_party/src/*
+third_party/build/
+*.tar.gz
+*.tar.xz
+!third_party/src/*.tar.gz
+!third_party/src/*.tar.xz
+!third_party/src/*.zip
+
+/deploy-*.log
+
+/app/entry/libs/
+
+# Machine-local build configuration
+/.env.local

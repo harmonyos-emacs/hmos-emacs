@@ -2,15 +2,31 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "GNU Emacs for HarmonyOS"
+      "value": "Homacs — a native editor for HarmonyOS"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "GNU Emacs"
+      "value": "Homacs — a native editor for HarmonyOS"
     },
     {
       "name": "EntryAbility_label",
-      "value": "Emacs"
+      "value": "Homacs"
+    },
+    {
+      "name": "user_dir_reason",
+      "value": "Select a Documents folder for Emacs files"
+    },
+    {
+      "name": "pasteboard_reason",
+      "value": "Read the system clipboard for Emacs yank and paste"
+    },
+    {
+      "name": "desktop_dir_reason",
+      "value": "Open files dropped from the Desktop in Emacs"
+    },
+    {
+      "name": "download_dir_reason",
+      "value": "Open files from the Download directory in Emacs"
     }
   ]
 }
