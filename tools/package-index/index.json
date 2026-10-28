@@ -1,0 +1,4611 @@
+{
+  "schema": 1,
+  "generated_at": "2026-10-28 08:52:33 +0800",
+  "selection": {
+    "name": "emacs-hmos top 100 package index",
+    "ranking_source": "MELPA download_counts.json",
+    "ranking_url": "https://melpa.org/download_counts.json",
+    "ranking_snapshot": "2026-10-27",
+    "method": "从 MELPA 下载量排名出发，剔除纯依赖库/内置包/已废弃包，保留 100 个用户会直接调用的包；GNU ELPA 独有包按同类热度补入。",
+    "caveat": "下载量不等于真实用户数；它受 CI、包管理器和依赖安装影响，只用作热度代理指标。"
+  },
+  "environment": {
+    "emacs_version": "32.0.50",
+    "system": "aarch64-unknown-linux-ohos",
+    "window_system": "nil",
+    "graphic": false,
+    "sqlite": false,
+    "gnutls": true,
+    "json": true,
+    "native_comp": false,
+    "threads": false,
+    "modules": false,
+    "executables": {
+      "git": false,
+      "rg": false,
+      "python3": false,
+      "node": false,
+      "sqlite3": false,
+      "pdflatex": false,
+      "R": false,
+      "java": false,
+      "clang": false,
+      "cmake": false,
+      "make": false,
+      "gcc": false,
+      "lua": false,
+      "go": false,
+      "cargo": false,
+      "php": false,
+      "tsc": false
+    }
+  },
+  "summary": {
+    "total": 100,
+    "tested": 100,
+    "installed": 100,
+    "compiled": 100,
+    "loaded": 95,
+    "passed": 95,
+    "partial": 5,
+    "blocked": 0,
+    "missing": 0,
+    "compile_warnings": 52,
+    "compile_errors": 0,
+    "load_errors": 5
+  },
+  "packages": [
+    {
+      "name": "magit",
+      "category": "git",
+      "source": "melpa",
+      "version": "20261024.1444",
+      "summary": "A Git porcelain inside Emacs",
+      "requires": [
+        "emacs",
+        "compat",
+        "cond-let",
+        "llama",
+        "magit-section",
+        "seq",
+        "transient",
+        "with-editor"
+      ],
+      "melpa_downloads": 5345855,
+      "melpa_rank": 3,
+      "verdict": "partial",
+      "tested_at": "2026-10-28T08:51:23+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 47,
+        "compiled": 47,
+        "warnings": 2,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":error: Wrong type argument: proper-list-p, (checkdoc-allow-quoting-nil-and-t . t)"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 2
+      },
+      "load": {
+        "status": "failed",
+        "file": "magit.el",
+        "feature": false,
+        "seconds": 0,
+        "error": "Searching for program: No such file or directory, git"
+      },
+      "limitation_tags": "git / GUI",
+      "limitations_note": "通过 git CLI 操作仓库；设备未安装 git 时无法提交、拉取或推送。 源码引用外部命令 git、git-absorb、git-autofixup、git-when-merged、gitk；设备上未找到 git。 引用 GUI 能力（display-graphic-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/magit.json"
+    },
+    {
+      "name": "forge",
+      "category": "git",
+      "source": "melpa",
+      "version": "20261021.1627",
+      "summary": "Access Git forges from Magit",
+      "requires": [
+        "emacs",
+        "compat",
+        "closql",
+        "cond-let",
+        "emacsql",
+        "ghub",
+        "llama",
+        "magit",
+        "markdown-mode",
+        "transient",
+        "yaml"
+      ],
+      "melpa_downloads": 804911,
+      "melpa_rank": 155,
+      "verdict": "ok",
+      "tested_at": "2026-10-28T08:51:25+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 24,
+        "compiled": 24,
+        "warnings": 9,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":error: Wrong type argument: listp, 0",
+          ":warning: ‘forge--create-pullreq-from-issue’ called with 4 arguments, but accepts only 0-3",
+          ":warning: ‘forge--merge-pullreq’ called with 4 arguments, but accepts only 0-3",
+          ":warning: ‘forge--update-discussion’ called with 4 arguments, but accepts only 0-3",
+          ":warning: ‘forge--update-issue’ called with 4 arguments, but accepts only 0-3",
+          ":warning: ‘forge--update-pullreq’ called with 4 arguments, but accepts only 0-3",
+          ":warning: ‘forge--fetch-user-repos’ called with 4 arguments, but accepts only 0-3"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "forge.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "git",
+      "limitations_note": "需要 git、forge API token 与网络。",
+      "hard_limits": true,
+      "raw_result": "results/forge.json"
+    },
+    {
+      "name": "git-timemachine",
+      "category": "git",
+      "source": "melpa",
+      "version": "20250128.940",
+      "summary": "Walk through git revisions of a file",
+      "requires": [
+        "emacs",
+        "transient"
+      ],
+      "melpa_downloads": 1045648,
+      "melpa_rank": 92,
+      "verdict": "ok",
+      "tested_at": "2026-10-28T08:51:26+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 8,
+        "warning_samples": [
+          ":warning: Unused lexical variable ‘date-full’",
+          ":warning: Unused lexical variable ‘subject’",
+          ":warning: docstring wider than 80 characters",
+          ":warning: docstring wider than 80 characters",
+          ":warning: Unused lexical variable ‘magit-buffer-revision’",
+          ":warning: Unused lexical variable ‘buffer-name’",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: the function ‘magit-blame-quit’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "git-timemachine.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "git",
+      "limitations_note": "需要 git 仓库与 git CLI。",
+      "hard_limits": true,
+      "raw_result": "results/git-timemachine.json"
+    },
+    {
+      "name": "git-link",
+      "category": "git",
+      "source": "melpa",
+      "version": "20260723.2213",
+      "summary": "Get the GitHub/Bitbucket/GitLab URL for a buffer location",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 659340,
+      "melpa_rank": 174,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T20:58:48+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "git-link.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/git-link.json"
+    },
+    {
+      "name": "diff-hl",
+      "category": "git",
+      "source": "melpa",
+      "version": "1.11.2",
+      "summary": "Highlight uncommitted changes using VC",
+      "requires": [
+        "cl-lib",
+        "emacs"
+      ],
+      "melpa_downloads": 890493,
+      "melpa_rank": 134,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T20:58:53+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 8,
+        "compiled": 8,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: the function ‘make-thread’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "diff-hl.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "git / GUI",
+      "limitations_note": "需要 git/VC 后端；tty 下 fringe 不可见，标记效果受限。 引用 GUI 能力（display-graphic-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/diff-hl.json"
+    },
+    {
+      "name": "helm",
+      "category": "completion",
+      "source": "melpa",
+      "version": "20261025.1539",
+      "summary": "Helm is an Emacs incremental and narrowing framework",
+      "requires": [
+        "helm-core",
+        "wfnames"
+      ],
+      "melpa_downloads": 3911459,
+      "melpa_rank": 5,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:00:15+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 80,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 40,
+        "compiled": 40,
+        "warnings": 18,
+        "warning_samples": [
+          ":warning: custom-declare-variable ‘helm-M-x-exclude-unusable-commands-in-mode’ docstring wider than 80 characters",
+          ":warning: ‘pcomplete-suffix-list’ is an obsolete variable (as of 24.1).",
+          ":warning: ‘pcomplete-suffix-list’ is an obsolete variable (as of 24.1).",
+          ":warning: ‘cl-gensym’ is an obsolete function (as of 31.1); use ‘gensym’ instead.",
+          ":warning: ‘mm-default-file-encoding’ is an obsolete function (as of 28.1); use ‘mm-default-file-type’ instead.",
+          ":warning: ‘ffap-newfile-prompt’ is an obsolete variable (as of 29.1); use ‘find-file-not-found-functions’ instead.",
+          ":warning: the function ‘clear-image-cache’ is not known to be defined.",
+          ":warning: docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "helm.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "缺 git / 缺 rg / GUI",
+      "limitations_note": "tty 下可用；GUI 工具提示/图标不可用。 源码引用外部命令 ag、fd、fdfind、git、pdfgrep、rg、rsync、tldr、updatedb、w3m；设备上未找到 git、rg。 引用 GUI 能力（display-graphic-p、image-type-available-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/helm.json"
+    },
+    {
+      "name": "company",
+      "category": "completion",
+      "source": "melpa",
+      "version": "1.1.0",
+      "summary": "Modular text completion framework",
+      "requires": [
+        "emacs",
+        "posframe"
+      ],
+      "melpa_downloads": 3689434,
+      "melpa_rank": 6,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:00:36+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 20,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 22,
+        "compiled": 22,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "company.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "缺 clang / 缺 cmake / GUI",
+      "limitations_note": "tty 下可用；GUI 文档弹窗不可用。 源码引用外部命令 clang、cmake、global；设备上未找到 clang、cmake。 引用 GUI 能力（display-graphic-p、image-type-available-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/company.json"
+    },
+    {
+      "name": "ivy",
+      "category": "completion",
+      "source": "melpa",
+      "version": "0.15.1",
+      "summary": "Incremental Vertical completYon",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1920615,
+      "melpa_rank": 32,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:00:47+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 9,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 4,
+        "compiled": 4,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "ivy.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/ivy.json"
+    },
+    {
+      "name": "counsel",
+      "category": "completion",
+      "source": "melpa",
+      "version": "0.15.1",
+      "summary": "Various completion functions using Ivy",
+      "requires": [
+        "emacs",
+        "ivy",
+        "swiper"
+      ],
+      "melpa_downloads": 1303983,
+      "melpa_rank": 57,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:08+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 20,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: the function ‘libxml-parse-xml-region’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "counsel.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "缺 git",
+      "limitations_note": "源码引用外部命令 ack-grep、es.exe、git；设备上未找到 git。 源码涉及 json-parse、libxml。",
+      "hard_limits": true,
+      "raw_result": "results/counsel.json"
+    },
+    {
+      "name": "swiper",
+      "category": "completion",
+      "source": "melpa",
+      "version": "0.15.1",
+      "summary": "Isearch with an overview.  Oh, man!",
+      "requires": [
+        "emacs",
+        "ivy"
+      ],
+      "melpa_downloads": 1351326,
+      "melpa_rank": 50,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:31:44+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "swiper.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/swiper.json"
+    },
+    {
+      "name": "consult",
+      "category": "completion",
+      "source": "melpa",
+      "version": "3.10",
+      "summary": "Search and navigate via completing-read",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 770974,
+      "melpa_rank": 159,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:22+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 12,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 9,
+        "compiled": 9,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "consult.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用；部分预览命令依赖外部工具。 源码引用外部命令 fdfind。 引用 GUI 能力（xwidget）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/consult.json"
+    },
+    {
+      "name": "vertico",
+      "category": "completion",
+      "source": "melpa",
+      "version": "2.15",
+      "summary": "VERTical Interactive COmpletion",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 465429,
+      "melpa_rank": 258,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:26+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 14,
+        "compiled": 14,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "vertico.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "tty 下可用。",
+      "hard_limits": false,
+      "raw_result": "results/vertico.json"
+    },
+    {
+      "name": "marginalia",
+      "category": "completion",
+      "source": "melpa",
+      "version": "2.13",
+      "summary": "Enrich existing commands with completion annotations",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 541306,
+      "melpa_rank": 212,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 5,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "marginalia.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用。 引用 GUI 能力（xwidget）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/marginalia.json"
+    },
+    {
+      "name": "orderless",
+      "category": "completion",
+      "source": "melpa",
+      "version": "1.8",
+      "summary": "Completion style for matching regexps in any order",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 473473,
+      "melpa_rank": 253,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:37+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "orderless.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "tty 下可用。",
+      "hard_limits": false,
+      "raw_result": "results/orderless.json"
+    },
+    {
+      "name": "corfu",
+      "category": "completion",
+      "source": "melpa",
+      "version": "2.16",
+      "summary": "COmpletion in Region FUnction",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 293581,
+      "melpa_rank": 363,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:41+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 9,
+        "compiled": 9,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "corfu.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用；child-frame 弹窗不可用时会回退到 minibuffer。 引用 GUI 能力（child-frame、display-graphic-p、tool-bar-mode）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/corfu.json"
+    },
+    {
+      "name": "cape",
+      "category": "completion",
+      "source": "melpa",
+      "version": "2.10",
+      "summary": "Completion At Point Extensions",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 196219,
+      "melpa_rank": 451,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:01:46+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 3,
+        "compiled": 3,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "cape.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "依赖 completion-at-point；tty 下可用。",
+      "hard_limits": false,
+      "raw_result": "results/cape.json"
+    },
+    {
+      "name": "embark",
+      "category": "completion",
+      "source": "melpa",
+      "version": "1.2",
+      "summary": "Conveniently act on minibuffer completions",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 359874,
+      "melpa_rank": 311,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:02:01+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 14,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "embark.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "tty 下可用。",
+      "hard_limits": false,
+      "raw_result": "results/embark.json"
+    },
+    {
+      "name": "helm-projectile",
+      "category": "completion",
+      "source": "melpa",
+      "version": "20260724.27",
+      "summary": "Helm integration for Projectile",
+      "requires": [
+        "emacs",
+        "helm",
+        "projectile"
+      ],
+      "melpa_downloads": 1428613,
+      "melpa_rank": 45,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:02:37+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 35,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "helm-projectile.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "源码引用外部命令 ack、ack-grep。",
+      "hard_limits": false,
+      "raw_result": "results/helm-projectile.json"
+    },
+    {
+      "name": "helm-descbinds",
+      "category": "completion",
+      "source": "melpa",
+      "version": "20250705.942",
+      "summary": "A convenient `describe-bindings' with `helm'",
+      "requires": [
+        "helm"
+      ],
+      "melpa_downloads": 1063298,
+      "melpa_rank": 86,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:02:40+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "helm-descbinds.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/helm-descbinds.json"
+    },
+    {
+      "name": "projectile",
+      "category": "project",
+      "source": "melpa",
+      "version": "20260930.434",
+      "summary": "Manage and navigate projects in Emacs easily",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 3361403,
+      "melpa_rank": 10,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:02:43+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "projectile.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "缺 git / 缺 rg",
+      "limitations_note": "源码引用外部命令 ack、ag、fd、fdfind、git、jj、rg、sh；设备上未找到 git、rg。 源码涉及 json-parse。",
+      "hard_limits": true,
+      "raw_result": "results/projectile.json"
+    },
+    {
+      "name": "treemacs",
+      "category": "project",
+      "source": "melpa",
+      "version": "20251226.1307",
+      "summary": "A tree style file explorer package",
+      "requires": [
+        "emacs",
+        "cl-lib",
+        "dash",
+        "s",
+        "ace-window",
+        "pfuture",
+        "hydra",
+        "ht",
+        "cfrs"
+      ],
+      "melpa_downloads": 1756792,
+      "melpa_rank": 35,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:04:23+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 96,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 34,
+        "compiled": 34,
+        "warnings": 36,
+        "warning_samples": [
+          ":warning: Unused lexical variable ‘children’",
+          ":warning: Useless clause following default ‘cond’ clause",
+          ":warning: ‘any’ in rx is obsolete and means ‘not-newline’; did you mean ‘anychar’?",
+          ":warning: in defface for ‘treemacs-header-button-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: in defface for ‘treemacs-git-commit-diff-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: in defface for ‘treemacs-async-loading-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: Unused lexical variable ‘children’",
+          ":warning: Useless clause following default ‘cond’ clause"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 3
+      },
+      "load": {
+        "status": "ok",
+        "file": "treemacs.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "缺 git / 缺 python3 / GUI",
+      "limitations_note": "文件树可用；图标需要 all-the-icons 与字体。 源码引用外部命令 git、python3；设备上未找到 git、python3。 引用 GUI 能力（child-frame、image-type-available-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/treemacs.json"
+    },
+    {
+      "name": "treemacs-projectile",
+      "category": "project",
+      "source": "melpa",
+      "version": "20250320.2206",
+      "summary": "Projectile integration for treemacs",
+      "requires": [
+        "emacs",
+        "projectile",
+        "treemacs"
+      ],
+      "melpa_downloads": 686505,
+      "melpa_rank": 167,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:04:26+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "treemacs-projectile.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/treemacs-projectile.json"
+    },
+    {
+      "name": "treemacs-icons-dired",
+      "category": "project",
+      "source": "melpa",
+      "version": "20250320.2145",
+      "summary": "Treemacs icons for dired",
+      "requires": [
+        "treemacs",
+        "emacs"
+      ],
+      "melpa_downloads": 519789,
+      "melpa_rank": 223,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:04:28+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "treemacs-icons-dired.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "需要 all-the-icons 与图标字体。 引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/treemacs-icons-dired.json"
+    },
+    {
+      "name": "imenu-list",
+      "category": "project",
+      "source": "melpa",
+      "version": "20210420.1200",
+      "summary": "Show imenu entries in a separate buffer",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 610354,
+      "melpa_rank": 190,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:04:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 7,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: custom-declare-variable ‘imenu-list-position’ docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: ‘hs-special-modes-alist’ is an obsolete variable (as of 31.1); use the buffer-local variables instead",
+          ":warning: ‘hs-special-modes-alist’ is an obsolete variable (as of 31.1); use the buffer-local variables instead",
+          ":warning: ‘hs-special-modes-alist’ is an obsolete variable (as of 31.1); use the buffer-local variables instead",
+          ":warning: ‘hs-special-modes-alist’ is an obsolete variable (as of 31.1); use the buffer-local variables instead",
+          ":warning: ‘point-at-bol’ is an obsolete function (as of 29.1); use ‘line-beginning-position’ or ‘pos-bol’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "imenu-list.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/imenu-list.json"
+    },
+    {
+      "name": "lsp-mode",
+      "category": "lsp",
+      "source": "melpa",
+      "version": "20261020.1728",
+      "summary": "LSP mode",
+      "requires": [
+        "emacs",
+        "dash",
+        "f",
+        "ht",
+        "spinner",
+        "markdown-mode",
+        "lv",
+        "eldoc"
+      ],
+      "melpa_downloads": 2603173,
+      "melpa_rank": 16,
+      "verdict": "partial",
+      "tested_at": "2026-10-27T21:07:14+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 156,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 154,
+        "compiled": 154,
+        "warnings": 194,
+        "warning_samples": [
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 5
+      },
+      "load": {
+        "status": "failed",
+        "file": "lsp-mode.el",
+        "feature": false,
+        "seconds": 0,
+        "error": "Symbol’s function definition is void: make-mutex"
+      },
+      "limitation_tags": "language server / 缺 cargo / 缺 go / 缺 java …",
+      "limitations_note": "需要外部语言服务器；本构建缺少 make-mutex/线程支持，lsp-mode 加载时会直接报错。 依赖：language server。 源码引用外部命令 asm-lsp、autotools-language-server、cargo、clojure-lsp、composer、csharp-ls、curl、earthlyls、fennel-ls、fsa…",
+      "hard_limits": true,
+      "raw_result": "results/lsp-mode.json"
+    },
+    {
+      "name": "lsp-ui",
+      "category": "lsp",
+      "source": "melpa",
+      "version": "20260512.1516",
+      "summary": "UI modules for lsp-mode",
+      "requires": [
+        "emacs",
+        "dash",
+        "lsp-mode",
+        "markdown-mode"
+      ],
+      "melpa_downloads": 1125308,
+      "melpa_rank": 77,
+      "verdict": "partial",
+      "tested_at": "2026-10-27T21:07:21+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 7,
+        "compiled": 7,
+        "warnings": 6,
+        "warning_samples": [
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "failed",
+        "file": "lsp-ui.el",
+        "feature": false,
+        "seconds": 0,
+        "error": "Symbol’s function definition is void: make-mutex"
+      },
+      "limitation_tags": "language server / GUI",
+      "limitations_note": "依赖 lsp-mode 与外部语言服务器；lsp-mode 在当前无 make-mutex 的构建上无法加载。 依赖：language server。 引用 GUI 能力（child-frame、display-graphic-p、image-type-available-p、xwidget）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/lsp-ui.json"
+    },
+    {
+      "name": "dap-mode",
+      "category": "lsp",
+      "source": "melpa",
+      "version": "20260616.1526",
+      "summary": "Debug Adapter Protocol mode",
+      "requires": [
+        "emacs",
+        "dash",
+        "lsp-mode",
+        "bui",
+        "f",
+        "s",
+        "lsp-treemacs",
+        "posframe",
+        "ht",
+        "lsp-docker"
+      ],
+      "melpa_downloads": 829596,
+      "melpa_rank": 150,
+      "verdict": "partial",
+      "tested_at": "2026-10-27T21:07:53+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 31,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 36,
+        "compiled": 36,
+        "warnings": 37,
+        "warning_samples": [
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex",
+          ":error: Symbol’s function definition is void: make-mutex"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "failed",
+        "file": "dap-mode.el",
+        "feature": false,
+        "seconds": 0,
+        "error": "Symbol’s function definition is void: make-mutex"
+      },
+      "limitation_tags": "debug adapter / GUI",
+      "limitations_note": "需要外部 debug adapter；若运行路径使用 make-mutex，在当前无线程构建上会失败。 源码引用外部命令 dlv、lldb-dap、lldb-vscode、netcoredbg、powershell、ps、pyenv、unzip。 引用 GUI 能力（window-system）；当前为 tty，相关交互不可用。 源码涉及 json-par…",
+      "hard_limits": true,
+      "raw_result": "results/dap-mode.json"
+    },
+    {
+      "name": "eglot",
+      "category": "lsp",
+      "source": "builtin",
+      "version": "1.24",
+      "summary": "The Emacs Client for LSP servers",
+      "requires": [
+        "emacs",
+        "eldoc",
+        "external-completion",
+        "flymake",
+        "jsonrpc",
+        "project",
+        "seq",
+        "xref"
+      ],
+      "melpa_downloads": 146609,
+      "melpa_rank": 566,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:31:46+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "builtin",
+        "files": 0,
+        "compiled": 0,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "eglot.elc",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "language server",
+      "limitations_note": "Emacs 内置 LSP 客户端；需要外部语言服务器。 依赖：language server。",
+      "hard_limits": true,
+      "raw_result": "results/eglot.json"
+    },
+    {
+      "name": "avy",
+      "category": "editing",
+      "source": "melpa",
+      "version": "0.5.0",
+      "summary": "Jump to arbitrary positions in visible text and select text quickly.",
+      "requires": [
+        "emacs",
+        "cl-lib"
+      ],
+      "melpa_downloads": 2549467,
+      "melpa_rank": 18,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:07:56+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 4,
+        "warning_samples": [
+          ":warning: in defcustom for ‘avy-ignored-modes’: ‘list’ without arguments",
+          ":warning: in defcustom for ‘avy-del-last-char-by’: ‘list’ without arguments",
+          ":warning: in defcustom for ‘avy-escape-chars’: ‘list’ without arguments",
+          ":warning: ‘inhibit-point-motion-hooks’ is an obsolete variable (as of 25.1); use ‘cursor-intangible-mode’ or ‘cursor-sensor-mode’ instead"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "avy.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/avy.json"
+    },
+    {
+      "name": "expand-region",
+      "category": "editing",
+      "source": "melpa",
+      "version": "1.0.0",
+      "summary": "Increase selected region by semantic units.",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1779195,
+      "melpa_rank": 34,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:13+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 16,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 28,
+        "compiled": 28,
+        "warnings": 9,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: the function ‘treesit-node-parent’ is not known to be defined.",
+          ":warning: the function ‘treesit-node-end’ is not known to be defined.",
+          ":warning: the function ‘treesit-node-start’ is not known to be defined.",
+          ":warning: the function ‘python-indent’ is not known to be defined.",
+          ":warning: the function ‘python-info-ppss-context’ is not known to be defined.",
+          ":warning: value from call to ‘+’ is unused",
+          ":warning: reference to free variable ‘yaml-indent-offset’"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "expand-region.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/expand-region.json"
+    },
+    {
+      "name": "multiple-cursors",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20260419.931",
+      "summary": "Multiple cursors for Emacs",
+      "requires": [
+        "emacs",
+        "cl-lib"
+      ],
+      "melpa_downloads": 1250940,
+      "melpa_rank": 62,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:22+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 8,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 9,
+        "compiled": 9,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "multiple-cursors.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/multiple-cursors.json"
+    },
+    {
+      "name": "iedit",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20251017.410",
+      "summary": "Edit multiple regions in the same way simultaneously",
+      "requires": [],
+      "melpa_downloads": 1406230,
+      "melpa_rank": 48,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:30+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 3,
+        "compiled": 3,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "iedit.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/iedit.json"
+    },
+    {
+      "name": "smartparens",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20260129.1214",
+      "summary": "Automatic insertion, wrapping and paredit-like navigation with user defined pairs",
+      "requires": [
+        "dash"
+      ],
+      "melpa_downloads": 2045397,
+      "melpa_rank": 28,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:44+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 12,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 28,
+        "compiled": 28,
+        "warnings": 42,
+        "warning_samples": [
+          ":warning: Unused lexical variable ‘next-thing’",
+          ":warning: the function ‘org-element-property’ is not known to be defined.",
+          ":warning: the function ‘org-element-at-point’ is not known to be defined.",
+          ":warning: the function ‘org-in-src-block-p’ is not known to be defined.",
+          ":warning: ‘defadvice’ is an obsolete macro (as of 30.1); use ‘advice-add’ or ‘define-advice’",
+          ":warning: ‘cycle-spacing’ called with 3 arguments, but accepts only 0 or 1",
+          ":warning: ‘cycle-spacing’ called with 3 arguments, but accepts only 0 or 1",
+          ":warning: ‘cycle-spacing’ called with 3 arguments, but accepts only 0 or 1"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "smartparens.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/smartparens.json"
+    },
+    {
+      "name": "paredit",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20241103.2046",
+      "summary": "Minor mode for editing parentheses",
+      "requires": [],
+      "melpa_downloads": 1096055,
+      "melpa_rank": 80,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:49+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 47,
+        "warning_samples": [
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead.",
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead.",
+          ":warning: ‘point-at-bol’ is an obsolete function (as of 29.1); use ‘line-beginning-position’ or ‘pos-bol’ instead.",
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead.",
+          ":warning: ‘point-at-bol’ is an obsolete function (as of 29.1); use ‘line-beginning-position’ or ‘pos-bol’ instead.",
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead.",
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead.",
+          ":warning: ‘point-at-eol’ is an obsolete function (as of 29.1); use ‘line-end-position’ or ‘pos-eol’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "paredit.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/paredit.json"
+    },
+    {
+      "name": "aggressive-indent",
+      "category": "editing",
+      "source": "melpa",
+      "version": "1.10.0",
+      "summary": "Minor mode to aggressively keep your code always indented",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1306472,
+      "melpa_rank": 56,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:52+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 4,
+        "warning_samples": [
+          ":warning: ‘cl-member-if’ is an obsolete function (as of 31.1); use ‘member-if’ instead.",
+          ":warning: ‘inhibit-point-motion-hooks’ is an obsolete variable (as of 25.1); use ‘cursor-intangible-mode’ or ‘cursor-sensor-mode’ instead",
+          ":warning: ‘cl-member-if’ is an obsolete function (as of 31.1); use ‘member-if’ instead.",
+          ":warning: ‘cl-member-if’ is an obsolete function (as of 31.1); use ‘member-if’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "aggressive-indent.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/aggressive-indent.json"
+    },
+    {
+      "name": "ws-butler",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20250310.205",
+      "summary": "Unobtrusively remove trailing whitespace",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1003262,
+      "melpa_rank": 105,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:54+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "ws-butler.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/ws-butler.json"
+    },
+    {
+      "name": "rainbow-delimiters",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20210515.1254",
+      "summary": "Highlight brackets according to their depth",
+      "requires": [],
+      "melpa_downloads": 1845195,
+      "melpa_rank": 33,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:08:57+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "rainbow-delimiters.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/rainbow-delimiters.json"
+    },
+    {
+      "name": "goto-chg",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20240407.1110",
+      "summary": "Go to last change",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1589596,
+      "melpa_rank": 40,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:00+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "goto-chg.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/goto-chg.json"
+    },
+    {
+      "name": "anzu",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20240929.201",
+      "summary": "Show number of matches in mode-line while searching",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1507541,
+      "melpa_rank": 41,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:04+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: Lexical argument shadows the dynamic variable prefix-arg"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "anzu.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/anzu.json"
+    },
+    {
+      "name": "hl-todo",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20261001.1547",
+      "summary": "Highlight TODO and similar keywords",
+      "requires": [
+        "emacs",
+        "compat",
+        "cond-let"
+      ],
+      "melpa_downloads": 1460373,
+      "melpa_rank": 43,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:07+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "hl-todo.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/hl-todo.json"
+    },
+    {
+      "name": "symbol-overlay",
+      "category": "editing",
+      "source": "melpa",
+      "version": "20260703.1437",
+      "summary": "Highlight symbols with keymap-enabled overlays",
+      "requires": [
+        "emacs",
+        "seq"
+      ],
+      "melpa_downloads": 680507,
+      "melpa_rank": 168,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:11+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "symbol-overlay.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/symbol-overlay.json"
+    },
+    {
+      "name": "ace-window",
+      "category": "editing",
+      "source": "melpa",
+      "version": "0.10.0",
+      "summary": "Quickly switch windows.",
+      "requires": [
+        "avy"
+      ],
+      "melpa_downloads": 2087636,
+      "melpa_rank": 25,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:12+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 17,
+        "warning_samples": [
+          ":warning: in defcustom for ‘aw-translate-char-function’: ‘const’ with quoted value: #'identity",
+          ":warning: in defcustom for ‘aw-translate-char-function’: ‘const’ with quoted value: #'downcase",
+          ":warning: custom-declare-variable ‘aw-minibuffer-flag’ docstring wider than 80 characters",
+          ":warning: custom-declare-variable ‘aw-ignored-buffers’ docstring wider than 80 characters",
+          ":warning: custom-declare-variable ‘aw-ignore-on’ docstring wider than 80 characters",
+          ":warning: in defcustom for ‘aw-leading-char-style’: ‘const’ with quoted value: 'char",
+          ":warning: in defcustom for ‘aw-leading-char-style’: ‘const’ with quoted value: 'path",
+          ":warning: custom-declare-variable ‘aw-frame-offset’ docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "ace-window.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/ace-window.json"
+    },
+    {
+      "name": "markdown-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20261022.55",
+      "summary": "Major mode for Markdown-formatted text",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 3630303,
+      "melpa_rank": 7,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:14+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "markdown-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（image-type-available-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/markdown-mode.json"
+    },
+    {
+      "name": "web-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260831.219",
+      "summary": "Major mode for editing web templates",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1623142,
+      "melpa_rank": 39,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:38+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 22,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 14,
+        "warning_samples": [
+          ":warning: ‘inhibit-point-motion-hooks’ is an obsolete variable (as of 25.1); use ‘cursor-intangible-mode’ or ‘cursor-sensor-mode’ instead",
+          ":warning: value from call to ‘member’ is unused",
+          ":warning: value from call to ‘member’ is unused",
+          ":warning: value from call to ‘string=’ is unused",
+          ":warning: assignment to free variable ‘tnameraw’",
+          ":warning: reference to free variable ‘tnameraw’",
+          ":warning: ‘inhibit-point-motion-hooks’ is an obsolete variable (as of 25.1); use ‘cursor-intangible-mode’ or ‘cursor-sensor-mode’ instead",
+          ":warning: ‘x-color-values’ is an obsolete function (as of 30.1); use ‘color-values’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "web-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "源码引用外部命令 jshint。 引用 GUI 能力（display-graphic-p、menu-bar-mode、tool-bar-mode、window-system）；当前为 tty，相关交互不可用。 源码涉及 libxml。",
+      "hard_limits": false,
+      "raw_result": "results/web-mode.json"
+    },
+    {
+      "name": "yaml-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260830.2340",
+      "summary": "Major mode for editing YAML files",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1336664,
+      "melpa_rank": 52,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:09:40+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "yaml-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/yaml-mode.json"
+    },
+    {
+      "name": "js2-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20231224",
+      "summary": "Improved JavaScript editing mode",
+      "requires": [
+        "emacs",
+        "cl-lib"
+      ],
+      "melpa_downloads": 1335967,
+      "melpa_rank": 53,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:06+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 15,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 3,
+        "compiled": 3,
+        "warnings": 22,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: defvar ‘js2-typed-array-externs’ docstring wider than 80 characters",
+          ":warning: in defcustom for ‘js2-global-externs’: ‘list’ without arguments",
+          ":warning: in defcustom for ‘js2-warn-about-unused-function-arguments’: ‘booleanp’ is not a valid type",
+          ":warning: ‘eq’ called with literal float that may never match (arg 2)",
+          ":warning: docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 10
+      },
+      "load": {
+        "status": "ok",
+        "file": "js2-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/js2-mode.json"
+    },
+    {
+      "name": "json-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "0.3.1",
+      "summary": "Major mode for editing JSON files",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 958428,
+      "melpa_rank": 114,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:10+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 5,
+        "warning_samples": [
+          ":warning: ‘font-lock-constant-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-constant-face",
+          ":warning: ‘font-lock-constant-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-constant-face",
+          ":warning: ‘font-lock-keyword-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-keyword-face",
+          ":warning: ‘font-lock-string-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-string-face",
+          ":warning: ‘font-lock-comment-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-comment-face"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "json-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/json-mode.json"
+    },
+    {
+      "name": "rust-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260725.1442",
+      "summary": "A major-mode for editing Rust source code",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 941461,
+      "melpa_rank": 122,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:14+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 9,
+        "compiled": 9,
+        "warnings": 3,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "rust-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "rustfmt / cargo",
+      "limitations_note": "编辑可用；格式化/编译需要 Rust 工具链。 依赖：rustfmt、cargo。",
+      "hard_limits": true,
+      "raw_result": "results/rust-mode.json"
+    },
+    {
+      "name": "go-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260510.1707",
+      "summary": "Major mode for the Go programming language",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 755595,
+      "melpa_rank": 162,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:20+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 16,
+        "warning_samples": [
+          ":warning: ‘go-plain-gopath’ is an obsolete function (as of 1.7.0); GOPATH has been deprecated in favour of Go modules.",
+          ":warning: Unused lexical variable ‘i’",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: ‘go-guess-gopath’ is an obsolete function (as of 1.7.0); GOPATH has been deprecated in favour of Go modules.",
+          ":warning: ‘go-original-gopath’ is an obsolete function (as of 1.7.0); GOPATH has been deprecated in favour of Go modules.",
+          ":warning: ‘go-original-gopath’ is an obsolete function (as of 1.7.0); GOPATH has been deprecated in favour of Go modules.",
+          ":warning: reference to free variable ‘error’"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "go-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "gofmt / gopls",
+      "limitations_note": "编辑可用；格式化/补全需要 Go 工具链。 依赖：gofmt、gopls。",
+      "hard_limits": true,
+      "raw_result": "results/go-mode.json"
+    },
+    {
+      "name": "php-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260825.1535",
+      "summary": "Major mode for editing PHP code",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 640094,
+      "melpa_rank": 181,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:30+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 9,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 18,
+        "compiled": 18,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "php-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "php",
+      "limitations_note": "编辑可用；运行/补全需要 PHP。 源码引用外部命令 php、php-parse；设备上未找到 php。 源码涉及 libxml。",
+      "hard_limits": true,
+      "raw_result": "results/php-mode.json"
+    },
+    {
+      "name": "typescript-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20250118.2056",
+      "summary": "Major mode for editing typescript",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 621275,
+      "melpa_rank": 186,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:34+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 30,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: defconst ‘typescript--type-name-re’ docstring wider than 80 characters",
+          ":warning: defconst ‘typescript--plain-method-re’ docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: Unused lexical variable ‘available-frameworks’",
+          ":warning: Unused lexical variable ‘available-frameworks’",
+          ":warning: ‘font-lock-function-name-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-function-name-face",
+          ":warning: ‘font-lock-function-name-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-function-name-face",
+          ":warning: custom-declare-face ‘typescript-this-face’ docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "typescript-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "node / npm / tsc",
+      "limitations_note": "编辑可用；补全/编译需要 Node/TypeScript。 依赖：npm、tsc。",
+      "hard_limits": true,
+      "raw_result": "results/typescript-mode.json"
+    },
+    {
+      "name": "clojure-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260709.952",
+      "summary": "Major mode for Clojure code",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1015005,
+      "melpa_rank": 99,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:10:38+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "clojure-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/clojure-mode.json"
+    },
+    {
+      "name": "cider",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20261024.1139",
+      "summary": "Clojure Interactive Development Environment that Rocks",
+      "requires": [
+        "emacs",
+        "clojure-mode",
+        "compat",
+        "parseedn",
+        "queue",
+        "spinner",
+        "seq",
+        "sesman",
+        "transient"
+      ],
+      "melpa_downloads": 1172630,
+      "melpa_rank": 72,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:11:38+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 58,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 54,
+        "compiled": 54,
+        "warnings": 6,
+        "warning_samples": [
+          ":warning: the function ‘libxml-parse-html-region’ is not known to be defined.",
+          ":warning: docstring wider than 80 characters",
+          ":warning: custom-declare-variable ‘cider-comment-style’ docstring wider than 80 characters",
+          ":warning: docstring wider than 80 characters",
+          ":warning: the function ‘libxml-parse-html-region’ is not known to be defined.",
+          ":warning: docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "cider.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "clojure / JVM / 缺 node / GUI",
+      "limitations_note": "需要 Clojure/Leiningen 与 JVM。 源码引用外部命令 clojure、lsof、node、ssh、taskkill；设备上未找到 node。 引用 GUI 能力（window-system）；当前为 tty，相关交互不可用。 源码涉及 libxml。",
+      "hard_limits": true,
+      "raw_result": "results/cider.json"
+    },
+    {
+      "name": "haskell-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260904.1042",
+      "summary": "A Haskell editing mode",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1015655,
+      "melpa_rank": 98,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:12:10+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 30,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 41,
+        "compiled": 41,
+        "warnings": 9,
+        "warning_samples": [
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead.",
+          ":warning: ‘font-lock-comment-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-comment-face",
+          ":warning: in defface for ‘haskell-debug-warning-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: in defface for ‘haskell-debug-keybinding-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: in defface for ‘haskell-debug-heading-face’: Value for face attribute ‘:inherit’ should not be quoted",
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "haskell-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "ghc / cabal / GUI",
+      "limitations_note": "编辑可用；REPL/补全需要 GHC。 依赖：cabal。 源码引用外部命令 cabal、ghc、hoogle、stack。 引用 GUI 能力（image-type-available-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/haskell-mode.json"
+    },
+    {
+      "name": "ess",
+      "category": "lang",
+      "source": "melpa",
+      "version": "26.5.0",
+      "summary": "Emacs Speaks Statistics",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 602073,
+      "melpa_rank": 192,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:02+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 50,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 30,
+        "compiled": 30,
+        "warnings": 134,
+        "warning_samples": [
+          ":warning: ‘font-lock-comment-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-comment-face",
+          ":warning: ‘font-lock-keyword-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-keyword-face",
+          ":warning: ‘font-lock-constant-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-constant-face",
+          ":warning: ‘font-lock-function-name-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-function-name-face",
+          ":warning: ‘font-lock-function-name-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-function-name-face",
+          ":warning: ‘font-lock-keyword-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-keyword-face",
+          ":error: Opening directory: Permission denied, /bin",
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "ess.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "R / GUI",
+      "limitations_note": "需要 R 解释器；设备未安装。 源码引用外部命令 Rterm、dd、evince、ghostview、gv、julia-basic、recode、xpdf。 引用 GUI 能力（display-graphic-p、window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/ess.json"
+    },
+    {
+      "name": "elpy",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20260715.1747",
+      "summary": "Emacs Python Development Environment",
+      "requires": [
+        "company",
+        "emacs",
+        "highlight-indentation",
+        "pyvenv",
+        "yasnippet",
+        "s"
+      ],
+      "melpa_downloads": 519060,
+      "melpa_rank": 225,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:41+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 37,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 6,
+        "compiled": 6,
+        "warnings": 149,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: custom-declare-variable ‘elpy-django-command’ docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: in defcustom for ‘elpy-django-commands-with-req-arg’: ‘list’ without arguments",
+          ":warning: custom-declare-variable ‘elpy-django-test-runner-formats’ docstring wider than 80 characters",
+          ":warning: in defcustom for ‘elpy-django-test-runner-formats’: ‘list’ without arguments",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring wider than 80 characters",
+          ":warning: reference to free variable ‘django-import-cmd’"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "elpy.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "python3 / jedi / flake8",
+      "limitations_note": "需要 Python 工具链；设备未安装 python3。 依赖：jedi、flake8。 源码引用外部命令 easy_install、py、python、pythonw、uv、virtualenv。",
+      "hard_limits": true,
+      "raw_result": "results/elpy.json"
+    },
+    {
+      "name": "pyvenv",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20211014.707",
+      "summary": "Python virtual environment interface",
+      "requires": [],
+      "melpa_downloads": 870546,
+      "melpa_rank": 137,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:42+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 7,
+        "warning_samples": [
+          ":warning: defvar ‘pyvenv-old-process-environment’ docstring wider than 80 characters",
+          ":warning: assignment to free variable ‘python-shell-virtualenv-path’",
+          ":warning: assignment to free variable ‘python-shell-virtualenv-root’",
+          ":warning: assignment to free variable ‘python-shell-virtualenv-root’",
+          ":warning: assignment to free variable ‘python-shell-virtualenv-path’",
+          ":warning: the function ‘widget-types-convert-widget’ is not known to be defined.",
+          ":warning: the function ‘widget-copy’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "pyvenv.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "python3",
+      "limitations_note": "需要 python3 管理虚拟环境。 源码引用外部命令 bash、py、python、python3、pythonw、sh、virtualenv；设备上未找到 python3。",
+      "hard_limits": true,
+      "raw_result": "results/pyvenv.json"
+    },
+    {
+      "name": "lua-mode",
+      "category": "lang",
+      "source": "builtin",
+      "version": "20250310.1150",
+      "summary": "A major-mode for editing Lua scripts",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 565234,
+      "melpa_rank": 203,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:43+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "builtin",
+        "files": 0,
+        "compiled": 0,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "lua-mode.elc",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "lua",
+      "limitations_note": "编辑可用；运行需要 Lua。",
+      "hard_limits": true,
+      "raw_result": "results/lua-mode.json"
+    },
+    {
+      "name": "dockerfile-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20251221.1644",
+      "summary": "Major mode for editing Docker's Dockerfiles",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 600636,
+      "melpa_rank": 193,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:50+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 5,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "dockerfile-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "docker",
+      "limitations_note": "编辑可用；构建需要 docker。",
+      "hard_limits": true,
+      "raw_result": "results/dockerfile-mode.json"
+    },
+    {
+      "name": "cmake-mode",
+      "category": "lang",
+      "source": "melpa",
+      "version": "20261002.1529",
+      "summary": "Major-mode for editing CMake sources",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 468076,
+      "melpa_rank": 255,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:13:52+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "cmake-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "cmake",
+      "limitations_note": "编辑可用；配置/构建需要 cmake。",
+      "hard_limits": true,
+      "raw_result": "results/cmake-mode.json"
+    },
+    {
+      "name": "auctex",
+      "category": "lang",
+      "source": "local",
+      "version": "14.2.0",
+      "summary": "Integrated environment for *TeX*",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": null,
+      "melpa_rank": null,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:38:49+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 24,
+        "compiled": 24,
+        "warnings": 5,
+        "warning_samples": [
+          ":warning: Unused lexical variable ‘max-image-size’",
+          ":warning: reference to free variable ‘max-image-size’",
+          ":warning: the function ‘image-flush’ is not known to be defined.",
+          ":warning: in defcustom: missing :type keyword parameter",
+          ":warning: in defcustom: fails to specify containing group"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "auctex.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "TeX distribution / GUI",
+      "limitations_note": "编辑 .tex 可用；编译/预览需要 latex、dvips 等 TeX 工具。GNU ELPA tar 较大，设备网络下载曾超时，本次用官方 tar 本地缓存安装。 依赖：TeX distribution。 源码引用外部命令 GSWIN32C.EXE、chktex、gs、mgs、pbibtex、pxdvi、rungs、texdoc、upmendex。 引…",
+      "hard_limits": true,
+      "raw_result": "results/auctex.json"
+    },
+    {
+      "name": "toc-org",
+      "category": "org",
+      "source": "melpa",
+      "version": "20260514.1415",
+      "summary": "Add table of contents to org-mode files (formerly, org-toc)",
+      "requires": [],
+      "melpa_downloads": 1060176,
+      "melpa_rank": 87,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:16:56+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "toc-org.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/toc-org.json"
+    },
+    {
+      "name": "org-download",
+      "category": "org",
+      "source": "melpa",
+      "version": "20241118.1846",
+      "summary": "Image drag-and-drop for Org-mode",
+      "requires": [
+        "emacs",
+        "async"
+      ],
+      "melpa_downloads": 590007,
+      "melpa_rank": 195,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:17:00+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 4,
+        "warning_samples": [
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: ‘org-display-inline-images’ is an obsolete function (as of 9.8); use ‘org-link-preview-region’ instead.",
+          ":warning: ‘image-type-from-file-name’ is an obsolete function (as of 29.1); use ‘image-supported-file-p’ instead.",
+          ":warning: ‘dnd-handle-one-url’ is an obsolete function (as of 30.1); use ‘dnd-handle-multiple-urls’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "org-download.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "下载图片需要网络；tty 下不能预览图片。 源码引用外部命令 magick、pngpaste、wl-paste、xclip。",
+      "hard_limits": false,
+      "raw_result": "results/org-download.json"
+    },
+    {
+      "name": "org-pomodoro",
+      "category": "org",
+      "source": "melpa",
+      "version": "20220318.1618",
+      "summary": "Pomodoro implementation for org-mode",
+      "requires": [
+        "alert",
+        "cl-lib"
+      ],
+      "melpa_downloads": 636421,
+      "melpa_rank": 183,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:17:07+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 9,
+        "warning_samples": [
+          ":warning: in defcustom for ‘org-pomodoro-pidgin-busy-status’: missing :type keyword parameter",
+          ":warning: in defcustom for ‘org-pomodoro-pidgin-break-status’: missing :type keyword parameter",
+          ":warning: reference to free variable ‘org-pomodoro-countdown’",
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: custom-declare-variable ‘org-pomodoro-manual-break’ docstring wider than 80 characters",
+          ":warning: in defcustom for ‘org-pomodoro-ticking-sound-states’: ‘list’ without arguments",
+          ":warning: in defcustom for ‘org-pomodoro-ticking-frequency’: ‘list’ without arguments",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "org-pomodoro.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "通知可能依赖 alert/系统通知；tty 下可能只在 echo area 提示。 源码引用外部命令 afplay、aplay。",
+      "hard_limits": false,
+      "raw_result": "results/org-pomodoro.json"
+    },
+    {
+      "name": "org-superstar",
+      "category": "org",
+      "source": "melpa",
+      "version": "20250914.1308",
+      "summary": "Prettify headings and plain lists in Org mode",
+      "requires": [
+        "org",
+        "emacs"
+      ],
+      "melpa_downloads": 509762,
+      "melpa_rank": 232,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:17:14+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 3,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "org-superstar.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/org-superstar.json"
+    },
+    {
+      "name": "org-roam",
+      "category": "org",
+      "source": "melpa",
+      "version": "20260425.1623",
+      "summary": "A database abstraction layer for Org-mode",
+      "requires": [
+        "emacs",
+        "compat",
+        "org",
+        "emacsql",
+        "magit-section"
+      ],
+      "melpa_downloads": 504673,
+      "melpa_rank": 235,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:17:29+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 13,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 15,
+        "compiled": 15,
+        "warnings": 4,
+        "warning_samples": [
+          ":warning: the function ‘ucs-normalize-NFD-string’ is not known to be defined.",
+          ":warning: the function ‘ucs-normalize-NFC-string’ is not known to be defined.",
+          ":warning: docstring wider than 80 characters",
+          ":warning: custom-declare-variable ‘org-roam-list-files-commands’ docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "org-roam.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "sqlite / 缺 rg",
+      "limitations_note": "需要 sqlite 支持；本构建 sqlite=false，可能只能使用基础文件功能。 源码引用外部命令 firefox、rg；设备上未找到 rg。 需要构建期能力 sqlite，当前构建未启用。",
+      "hard_limits": true,
+      "raw_result": "results/org-roam.json"
+    },
+    {
+      "name": "pdf-tools",
+      "category": "org",
+      "source": "melpa",
+      "version": "20260102.1101",
+      "summary": "Support library for PDF documents",
+      "requires": [
+        "emacs",
+        "tablist",
+        "let-alist"
+      ],
+      "melpa_downloads": 519843,
+      "melpa_rank": 222,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:11+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 40,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 18,
+        "compiled": 18,
+        "warnings": 6,
+        "warning_samples": [
+          ":warning: the function ‘image-size’ is not known to be defined.",
+          ":warning: the function ‘image-size’ is not known to be defined.",
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: the function ‘image-size’ is not known to be defined.",
+          ":warning: the function ‘image-size’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "pdf-tools.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "C compiler / make / libpng / zlib …",
+      "limitations_note": "Elisp 部分可加载；实际打开 PDF 需要编译 epdfinfo 服务端，设备没有构建工具时只能安装不能渲染。 依赖：C compiler、make、libpng、zlib。 源码引用外部命令 convert、sh。 引用 GUI 能力（image-type-available-p、x-create-frame）；当前为 tty，相关交互不可用。",
+      "hard_limits": true,
+      "raw_result": "results/pdf-tools.json"
+    },
+    {
+      "name": "nov",
+      "category": "org",
+      "source": "melpa",
+      "version": "20251213.1501",
+      "summary": "Featureful EPUB reader mode",
+      "requires": [
+        "esxml",
+        "emacs"
+      ],
+      "melpa_downloads": 196083,
+      "melpa_rank": 453,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:18+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 3,
+        "warning_samples": [
+          ":warning: ‘dom-text’ is an obsolete function (as of 31.1); use ‘dom-inner-text’ instead.",
+          ":warning: the function ‘libxml-parse-html-region’ is not known to be defined.",
+          ":warning: the function ‘libxml-parse-xml-region’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "nov.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "zip / unzip / GUI",
+      "limitations_note": "EPUB 解析通常需要 zip/unzip；设备未预装。 源码引用外部命令 unzip。 引用 GUI 能力（display-graphic-p、image-type-available-p）；当前为 tty，相关交互不可用。 源码涉及 libxml。",
+      "hard_limits": true,
+      "raw_result": "results/nov.json"
+    },
+    {
+      "name": "htmlize",
+      "category": "org",
+      "source": "melpa",
+      "version": "20250724.1703",
+      "summary": "Convert buffer text and decorations to HTML",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1271243,
+      "melpa_rank": 60,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:24+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "htmlize.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/htmlize.json"
+    },
+    {
+      "name": "writeroom-mode",
+      "category": "org",
+      "source": "melpa",
+      "version": "20250204.2335",
+      "summary": "Minor mode for distraction-free writing",
+      "requires": [
+        "emacs",
+        "visual-fill-column"
+      ],
+      "melpa_downloads": 655313,
+      "melpa_rank": 176,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:29+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "writeroom-mode.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "窗口布局类功能；tty 下部分生效。",
+      "hard_limits": false,
+      "raw_result": "results/writeroom-mode.json"
+    },
+    {
+      "name": "olivetti",
+      "category": "org",
+      "source": "melpa",
+      "version": "20260524.213",
+      "summary": "Minor mode to automatically balance window margins",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 166643,
+      "melpa_rank": 514,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 2,
+        "warning_samples": [
+          ":warning: reference to free variable ‘olivetti-mode’",
+          ":warning: reference to free variable ‘olivetti-mode-map’"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "olivetti.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "窗口边距类功能；tty 下效果有限。 引用 GUI 能力（window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/olivetti.json"
+    },
+    {
+      "name": "devdocs",
+      "category": "org",
+      "source": "melpa",
+      "version": "0.7",
+      "summary": "Emacs viewer for DevDocs",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 492769,
+      "melpa_rank": 243,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:35+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: the function ‘libxml-parse-html-region’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "devdocs.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "源码涉及 json-parse、libxml。",
+      "hard_limits": false,
+      "raw_result": "results/devdocs.json"
+    },
+    {
+      "name": "vterm",
+      "category": "term",
+      "source": "melpa",
+      "version": "20260914.1641",
+      "summary": "Fully-featured terminal emulator",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 606686,
+      "melpa_rank": 191,
+      "verdict": "partial",
+      "tested_at": "2026-10-27T21:18:39+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 4,
+        "warning_samples": [
+          ":warning: custom-declare-variable ‘vterm-eval-cmds’ docstring contains control char #x1b (position 203)",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘add-text-properties’ on constant string (arg 4)"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "failed",
+        "file": "vterm.el",
+        "feature": false,
+        "seconds": 0,
+        "error": "VTerm needs module support.  Please compile Emacs with\n  the --with-modules option!"
+      },
+      "limitation_tags": "module support / cmake / C compiler",
+      "limitations_note": "Emacs 未启用 --with-modules，vterm 加载时直接报 “VTerm needs module support”；有编译器也无法加载模块。 依赖：cmake、C compiler。 源码引用外部命令 cmake；设备上未找到 cmake。",
+      "hard_limits": true,
+      "raw_result": "results/vterm.json"
+    },
+    {
+      "name": "which-key",
+      "category": "workflow",
+      "source": "builtin",
+      "version": "3.6.1",
+      "summary": "Display available keybindings in popup",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 2197152,
+      "melpa_rank": 22,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:40+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "builtin",
+        "files": 0,
+        "compiled": 0,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "which-key.elc",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "tty 下可用；弹出方式受终端限制。",
+      "hard_limits": false,
+      "raw_result": "results/which-key.json"
+    },
+    {
+      "name": "hydra",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "0.15.0",
+      "summary": "Make bindings that stick around.",
+      "requires": [
+        "cl-lib",
+        "lv"
+      ],
+      "melpa_downloads": 2176949,
+      "melpa_rank": 23,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:42+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 3,
+        "compiled": 3,
+        "warnings": 29,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: docstring wider than 80 characters",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring wider than 80 characters",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring wider than 80 characters",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring wider than 80 characters"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "hydra.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "tty 下可用；着色/提示受终端限制。",
+      "hard_limits": false,
+      "raw_result": "results/hydra.json"
+    },
+    {
+      "name": "use-package",
+      "category": "workflow",
+      "source": "builtin",
+      "version": "2.4.6",
+      "summary": "A configuration macro for simplifying your .emacs",
+      "requires": [
+        "emacs",
+        "bind-key"
+      ],
+      "melpa_downloads": 2269288,
+      "melpa_rank": 21,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:18:43+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "builtin",
+        "files": 0,
+        "compiled": 0,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "use-package.elc",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "纯 Elisp 配置宏；Emacs 30+ 内置，ELPA 版本可独立升级。",
+      "hard_limits": false,
+      "raw_result": "results/use-package.json"
+    },
+    {
+      "name": "evil",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260728.1438",
+      "summary": "Extensible vi layer",
+      "requires": [
+        "emacs",
+        "cl-lib",
+        "goto-chg",
+        "nadvice"
+      ],
+      "melpa_downloads": 2133602,
+      "melpa_rank": 24,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:19:03+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 18,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 18,
+        "compiled": 18,
+        "warnings": 1,
+        "warning_samples": [
+          ":warning: ‘evil-member-recursive-if’ is an obsolete function (as of 1.15.0)."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "evil.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "纯 Elisp，tty 下可用。 引用 GUI 能力（gui-get-selection）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/evil.json"
+    },
+    {
+      "name": "evil-collection",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20261014.225",
+      "summary": "A set of keybindings for Evil mode",
+      "requires": [
+        "emacs",
+        "evil"
+      ],
+      "melpa_downloads": 845789,
+      "melpa_rank": 146,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:20:29+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 84,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "evil-collection.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "纯 Elisp 键位集合，tty 下可用。 引用 GUI 能力（xwidget）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/evil-collection.json"
+    },
+    {
+      "name": "exec-path-from-shell",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260423.1833",
+      "summary": "Get environment variables such as $PATH from the shell",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1295741,
+      "melpa_rank": 58,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:20:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "exec-path-from-shell.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "源码引用外部命令 printf。 引用 GUI 能力（window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/exec-path-from-shell.json"
+    },
+    {
+      "name": "editorconfig",
+      "category": "workflow",
+      "source": "builtin",
+      "version": "20260118.718",
+      "summary": "EditorConfig Emacs Plugin",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 906563,
+      "melpa_rank": 128,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:20:33+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "builtin",
+        "files": 0,
+        "compiled": 0,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "editorconfig.elc",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/editorconfig.json"
+    },
+    {
+      "name": "yasnippet",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "0.14.3",
+      "summary": "Yet another snippet extension for Emacs",
+      "requires": [
+        "cl-lib",
+        "emacs"
+      ],
+      "melpa_downloads": 2534526,
+      "melpa_rank": 20,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:20:35+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 0,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "yasnippet.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "引用 GUI 能力（window-system）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/yasnippet.json"
+    },
+    {
+      "name": "yasnippet-snippets",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20251215.1231",
+      "summary": "Collection of yasnippet snippets",
+      "requires": [
+        "yasnippet"
+      ],
+      "melpa_downloads": 942133,
+      "melpa_rank": 121,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:21:54+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 78,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "yasnippet-snippets.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/yasnippet-snippets.json"
+    },
+    {
+      "name": "package-lint",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260903.2119",
+      "summary": "A linting library for elisp package authors",
+      "requires": [
+        "emacs",
+        "let-alist"
+      ],
+      "melpa_downloads": 1191945,
+      "melpa_rank": 68,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:22:33+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 38,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "package-lint.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/package-lint.json"
+    },
+    {
+      "name": "dumb-jump",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260603.1700",
+      "summary": "Jump to definition for 60+ languages without configuration",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1242393,
+      "melpa_rank": 64,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:22:43+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 9,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "dumb-jump.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/dumb-jump.json"
+    },
+    {
+      "name": "doom-modeline",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20261027.813",
+      "summary": "A minimal and modern mode-line",
+      "requires": [
+        "emacs",
+        "compat",
+        "nerd-icons",
+        "shrink-path"
+      ],
+      "melpa_downloads": 1072510,
+      "melpa_rank": 83,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:22:51+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 7,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 4,
+        "compiled": 4,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "doom-modeline.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用，但图标/字体与 GUI 效果不同。 源码引用外部命令 direnv、pipenv、pyenv。 引用 GUI 能力（display-graphic-p、image-type-available-p、xwidget）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/doom-modeline.json"
+    },
+    {
+      "name": "doom-themes",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260826.1413",
+      "summary": "An opinionated pack of modern color-themes",
+      "requires": [
+        "emacs",
+        "cl-lib"
+      ],
+      "melpa_downloads": 856270,
+      "melpa_rank": 143,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:23:04+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 11,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 83,
+        "compiled": 83,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "doom-themes.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "主题可在 tty 下加载；颜色受终端 256 色限制。 引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/doom-themes.json"
+    },
+    {
+      "name": "zenburn-theme",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260901.1544",
+      "summary": "A low contrast color theme",
+      "requires": [],
+      "melpa_downloads": 757877,
+      "melpa_rank": 161,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:23:07+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "zenburn-theme.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用；颜色受终端限制。 引用 GUI 能力（tool-bar-mode）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/zenburn-theme.json"
+    },
+    {
+      "name": "solarized-theme",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20261025.1447",
+      "summary": "The Solarized color theme",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 585351,
+      "melpa_rank": 197,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:23:34+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 18,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 24,
+        "compiled": 24,
+        "warnings": 19,
+        "warning_samples": [
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face",
+          ":warning: ‘font-lock-warning-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-warning-face"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 7
+      },
+      "load": {
+        "status": "ok",
+        "file": "solarized-theme.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "tty 下可用；颜色受终端限制。 引用 GUI 能力（tool-bar-mode）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/solarized-theme.json"
+    },
+    {
+      "name": "modus-themes",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "5.3.0",
+      "summary": "Elegant, highly legible and customizable themes",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 471634,
+      "melpa_rank": 254,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:23:55+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 20,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 9,
+        "compiled": 9,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "modus-themes.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "Emacs 内置主题的 ELPA 版本；tty 下可用。 引用 GUI 能力（child-frame、tool-bar-mode）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/modus-themes.json"
+    },
+    {
+      "name": "ef-themes",
+      "category": "workflow",
+      "source": "gnu",
+      "version": "2.2.1",
+      "summary": "Colorful and legible themes",
+      "requires": [
+        "emacs",
+        "modus-themes"
+      ],
+      "melpa_downloads": null,
+      "melpa_rank": null,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:21+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 25,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 41,
+        "compiled": 41,
+        "warnings": 2,
+        "warning_samples": [
+          ":warning: file has no ‘lexical-binding’ directive on its first line",
+          ":warning: Malformed function ‘(emacs-lisp-mode (show-trailing-whitespace . t) (indent-tabs-mode))’"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "ef-themes.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "主题可在 tty 下加载；颜色受终端限制。 源码涉及 native-compile。",
+      "hard_limits": false,
+      "raw_result": "results/ef-themes.json"
+    },
+    {
+      "name": "all-the-icons",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20250527.927",
+      "summary": "A library for inserting Developer icons",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 1327672,
+      "melpa_rank": 55,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 9,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "all-the-icons.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "需要 Nerd Font/图标字体；tty 下通常显示为占位符。",
+      "hard_limits": false,
+      "raw_result": "results/all-the-icons.json"
+    },
+    {
+      "name": "page-break-lines",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260904.1100",
+      "summary": "Display ^L page breaks as tidy horizontal lines",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 554496,
+      "melpa_rank": 206,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:34+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 1,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "page-break-lines.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/page-break-lines.json"
+    },
+    {
+      "name": "dashboard",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260809.447",
+      "summary": "A startup screen extracted from Spacemacs",
+      "requires": [
+        "emacs"
+      ],
+      "melpa_downloads": 384515,
+      "melpa_rank": 294,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:40+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 2,
+        "compiled": 2,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "dashboard.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "GUI",
+      "limitations_note": "文本模式可用；图标/图片在 tty 下不可用。 引用 GUI 能力（display-graphic-p、image-type-available-p）；当前为 tty，相关交互不可用。",
+      "hard_limits": false,
+      "raw_result": "results/dashboard.json"
+    },
+    {
+      "name": "elfeed",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20261010.1010",
+      "summary": "An Atom/RSS feed reader",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 316469,
+      "melpa_rank": 338,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:46+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 4,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 11,
+        "compiled": 11,
+        "warnings": 2,
+        "warning_samples": [
+          ":warning: the function ‘libxml-parse-html-region’ is not known to be defined.",
+          ":warning: the function ‘libxml-parse-xml-region’ is not known to be defined."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "elfeed.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "需要网络；RSS 抓取使用 url.el，不依赖 curl。 源码引用外部命令 gzip。 源码涉及 json-parse、libxml。",
+      "hard_limits": true,
+      "raw_result": "results/elfeed.json"
+    },
+    {
+      "name": "elfeed-org",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20250219.950",
+      "summary": "Configure elfeed with one or more org-mode files",
+      "requires": [
+        "emacs",
+        "elfeed",
+        "org"
+      ],
+      "melpa_downloads": 74928,
+      "melpa_rank": 830,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:24:49+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 2,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 7,
+        "warning_samples": [
+          ":warning: in defcustom for ‘rmh-elfeed-org-auto-ignore-invalid-feeds’: ‘bool’ is not a valid type",
+          ":warning: docstring wider than 80 characters",
+          ":warning: docstring wider than 80 characters",
+          ":warning: Unused lexical variable ‘feed’",
+          ":warning: Unused lexical variable ‘tag’",
+          ":warning: ‘elfeed-http-error-hooks’ is an obsolete variable (as of 4.0.0); use ‘elfeed-http-error-hook’ instead.",
+          ":warning: ‘elfeed-parse-error-hooks’ is an obsolete variable (as of 4.0.0); use ‘elfeed-parse-error-hook’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "elfeed-org.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "依赖 elfeed；需要网络。",
+      "hard_limits": false,
+      "raw_result": "results/elfeed-org.json"
+    },
+    {
+      "name": "gptel",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20261018.848",
+      "summary": "Interact with ChatGPT or other LLMs",
+      "requires": [
+        "emacs",
+        "transient",
+        "compat"
+      ],
+      "melpa_downloads": 262529,
+      "melpa_rank": 382,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:25:15+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 23,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 18,
+        "compiled": 18,
+        "warnings": 5,
+        "warning_samples": [
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘when-let’ is an obsolete macro (as of 31.1); use ‘when-let*’ or ‘and-let*’ instead.",
+          ":warning: ‘if-let’ is an obsolete macro (as of 31.1); use ‘if-let*’ instead.",
+          ":warning: ‘provided-mode-derived-p’ called with 4 arguments, but accepts only 2"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 1
+      },
+      "load": {
+        "status": "ok",
+        "file": "gptel.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "API key / network / 缺 git / GUI",
+      "limitations_note": "核心功能需要 LLM API key 与网络；部分扩展命令会调用 aws/curl/git，属可选路径。 依赖：network。 源码引用外部命令 aws、curl、git；设备上未找到 git。 引用 GUI 能力（display-graphic-p）；当前为 tty，相关交互不可用。 源码涉及 json-parse。",
+      "hard_limits": true,
+      "raw_result": "results/gptel.json"
+    },
+    {
+      "name": "helpful",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20250408.334",
+      "summary": "A better *help* buffer",
+      "requires": [
+        "emacs",
+        "dash",
+        "s",
+        "f",
+        "elisp-refs"
+      ],
+      "melpa_downloads": 383652,
+      "melpa_rank": 295,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:25:23+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 7,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 9,
+        "warning_samples": [
+          ":warning: ‘elisp-eldoc-documentation-function’ is an obsolete function (as of 28.1); use ElDoc’s interfaces instead.",
+          ":warning: ‘any’ in rx is obsolete and means ‘not-newline’; did you mean ‘anychar’?",
+          ":warning: value from call to ‘-map’ is unused",
+          ":warning: value from call to ‘-map’ is unused",
+          ":warning: value from call to ‘-map’ is unused",
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: ‘help-fns--autoloaded-p’ called with 2 arguments, but accepts only 1",
+          ":warning: ‘font-lock-keyword-face’ is an obsolete variable (as of 31.1); use the quoted symbol instead: 'font-lock-keyword-face"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "helpful.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "源码涉及 native-compile。",
+      "hard_limits": false,
+      "raw_result": "results/helpful.json"
+    },
+    {
+      "name": "restclient",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20260627.1851",
+      "summary": "An interactive HTTP client for Emacs",
+      "requires": [
+        "emacs",
+        "compat"
+      ],
+      "melpa_downloads": 351183,
+      "melpa_rank": 318,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:25:28+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "ok",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 0,
+        "warning_samples": [],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "restclient.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "见详情",
+      "limitations_note": "需要网络；HTTP 请求由 url.el 发出。",
+      "hard_limits": false,
+      "raw_result": "results/restclient.json"
+    },
+    {
+      "name": "paradox",
+      "category": "workflow",
+      "source": "melpa",
+      "version": "20191011.1119",
+      "summary": "A modern Packages Menu. Colored, with package ratings, and customizable",
+      "requires": [
+        "emacs",
+        "seq",
+        "let-alist",
+        "spinner",
+        "hydra"
+      ],
+      "melpa_downloads": 1084249,
+      "melpa_rank": 82,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:25:32+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 3,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 6,
+        "compiled": 6,
+        "warnings": 28,
+        "warning_samples": [
+          ":warning: docstring has wrong usage of unescaped single quotes (use \\=' or different quoting such as `...')",
+          ":warning: docstring wider than 80 characters",
+          ":warning: Missing default branch in cond",
+          ":warning: docstring wider than 80 characters",
+          ":warning: the function ‘paradox-https-proxy’ is not known to be defined.",
+          ":warning: ‘package-menu-filter’ is an obsolete function (as of 27.1); use ‘package-menu-filter-by-keyword’ instead.",
+          ":warning: docstring wider than 80 characters",
+          ":warning: ‘package-menu-filter’ is an obsolete function (as of 27.1); use ‘package-menu-filter-by-keyword’ instead."
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "paradox.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/paradox.json"
+    },
+    {
+      "name": "undo-tree",
+      "category": "workflow",
+      "source": "gnu",
+      "version": "0.8.2",
+      "summary": "Treat undo history as a tree",
+      "requires": [
+        "queue"
+      ],
+      "melpa_downloads": 495073,
+      "melpa_rank": 241,
+      "verdict": "ok",
+      "tested_at": "2026-10-27T21:25:39+0800",
+      "install": {
+        "status": "ok",
+        "already_installed": true,
+        "seconds": 6,
+        "error": null
+      },
+      "byte_compile": {
+        "status": "warnings",
+        "files": 1,
+        "compiled": 1,
+        "warnings": 12,
+        "warning_samples": [
+          ":warning: ‘max-specpdl-size’ is an obsolete variable (as of 29.1).",
+          ":warning: assignment to free variable ‘changeset’",
+          ":warning: reference to free variable ‘changeset’",
+          ":warning: ‘undo-elt-crosses-region’ is an obsolete function (as of 25.1).",
+          ":warning: ‘undo-elt-crosses-region’ is an obsolete function (as of 25.1).",
+          ":warning: Use keywords rather than deprecated positional arguments to ‘define-minor-mode’",
+          ":warning: value from call to ‘nreverse’ is unused",
+          ":warning: value from call to ‘nreverse’ is unused"
+        ],
+        "errors": [],
+        "error_samples": [],
+        "seconds": 0
+      },
+      "load": {
+        "status": "ok",
+        "file": "undo-tree.el",
+        "feature": true,
+        "seconds": 0,
+        "error": null
+      },
+      "limitation_tags": "—",
+      "limitations_note": "—",
+      "hard_limits": false,
+      "raw_result": "results/undo-tree.json"
+    }
+  ]
+}

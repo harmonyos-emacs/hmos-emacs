@@ -1,0 +1,1319 @@
+[
+  {
+    "name": "magit",
+    "category": "git",
+    "source": "melpa",
+    "version": "20261024.1444",
+    "summary": "A Git porcelain inside Emacs",
+    "requires": [
+      "emacs",
+      "compat",
+      "cond-let",
+      "llama",
+      "magit-section",
+      "seq",
+      "transient",
+      "with-editor"
+    ],
+    "melpa_downloads": 5345855,
+    "melpa_rank": 3
+  },
+  {
+    "name": "forge",
+    "category": "git",
+    "source": "melpa",
+    "version": "20261021.1627",
+    "summary": "Access Git forges from Magit",
+    "requires": [
+      "emacs",
+      "compat",
+      "closql",
+      "cond-let",
+      "emacsql",
+      "ghub",
+      "llama",
+      "magit",
+      "markdown-mode",
+      "transient",
+      "yaml"
+    ],
+    "melpa_downloads": 804911,
+    "melpa_rank": 155
+  },
+  {
+    "name": "git-timemachine",
+    "category": "git",
+    "source": "melpa",
+    "version": "20250128.940",
+    "summary": "Walk through git revisions of a file",
+    "requires": [
+      "emacs",
+      "transient"
+    ],
+    "melpa_downloads": 1045648,
+    "melpa_rank": 92
+  },
+  {
+    "name": "git-link",
+    "category": "git",
+    "source": "melpa",
+    "version": "20260723.2213",
+    "summary": "Get the GitHub/Bitbucket/GitLab URL for a buffer location",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 659340,
+    "melpa_rank": 174
+  },
+  {
+    "name": "diff-hl",
+    "category": "git",
+    "source": "melpa",
+    "version": "1.11.2",
+    "summary": "Highlight uncommitted changes using VC",
+    "requires": [
+      "cl-lib",
+      "emacs"
+    ],
+    "melpa_downloads": 890493,
+    "melpa_rank": 134
+  },
+  {
+    "name": "helm",
+    "category": "completion",
+    "source": "melpa",
+    "version": "20261025.1539",
+    "summary": "Helm is an Emacs incremental and narrowing framework",
+    "requires": [
+      "helm-core",
+      "wfnames"
+    ],
+    "melpa_downloads": 3911459,
+    "melpa_rank": 5
+  },
+  {
+    "name": "company",
+    "category": "completion",
+    "source": "melpa",
+    "version": "1.1.0",
+    "summary": "Modular text completion framework",
+    "requires": [
+      "emacs",
+      "posframe"
+    ],
+    "melpa_downloads": 3689434,
+    "melpa_rank": 6
+  },
+  {
+    "name": "ivy",
+    "category": "completion",
+    "source": "melpa",
+    "version": "0.15.1",
+    "summary": "Incremental Vertical completYon",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1920615,
+    "melpa_rank": 32
+  },
+  {
+    "name": "counsel",
+    "category": "completion",
+    "source": "melpa",
+    "version": "0.15.1",
+    "summary": "Various completion functions using Ivy",
+    "requires": [
+      "emacs",
+      "ivy",
+      "swiper"
+    ],
+    "melpa_downloads": 1303983,
+    "melpa_rank": 57
+  },
+  {
+    "name": "swiper",
+    "category": "completion",
+    "source": "melpa",
+    "version": "0.15.1",
+    "summary": "Isearch with an overview.  Oh, man!",
+    "requires": [
+      "emacs",
+      "ivy"
+    ],
+    "melpa_downloads": 1351326,
+    "melpa_rank": 50
+  },
+  {
+    "name": "consult",
+    "category": "completion",
+    "source": "melpa",
+    "version": "3.10",
+    "summary": "Search and navigate via completing-read",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 770974,
+    "melpa_rank": 159
+  },
+  {
+    "name": "vertico",
+    "category": "completion",
+    "source": "melpa",
+    "version": "2.15",
+    "summary": "VERTical Interactive COmpletion",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 465429,
+    "melpa_rank": 258
+  },
+  {
+    "name": "marginalia",
+    "category": "completion",
+    "source": "melpa",
+    "version": "2.13",
+    "summary": "Enrich existing commands with completion annotations",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 541306,
+    "melpa_rank": 212
+  },
+  {
+    "name": "orderless",
+    "category": "completion",
+    "source": "melpa",
+    "version": "1.8",
+    "summary": "Completion style for matching regexps in any order",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 473473,
+    "melpa_rank": 253
+  },
+  {
+    "name": "corfu",
+    "category": "completion",
+    "source": "melpa",
+    "version": "2.16",
+    "summary": "COmpletion in Region FUnction",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 293581,
+    "melpa_rank": 363
+  },
+  {
+    "name": "cape",
+    "category": "completion",
+    "source": "melpa",
+    "version": "2.10",
+    "summary": "Completion At Point Extensions",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 196219,
+    "melpa_rank": 451
+  },
+  {
+    "name": "embark",
+    "category": "completion",
+    "source": "melpa",
+    "version": "1.2",
+    "summary": "Conveniently act on minibuffer completions",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 359874,
+    "melpa_rank": 311
+  },
+  {
+    "name": "helm-projectile",
+    "category": "completion",
+    "source": "melpa",
+    "version": "20260724.27",
+    "summary": "Helm integration for Projectile",
+    "requires": [
+      "emacs",
+      "helm",
+      "projectile"
+    ],
+    "melpa_downloads": 1428613,
+    "melpa_rank": 45
+  },
+  {
+    "name": "helm-descbinds",
+    "category": "completion",
+    "source": "melpa",
+    "version": "20250705.942",
+    "summary": "A convenient `describe-bindings' with `helm'",
+    "requires": [
+      "helm"
+    ],
+    "melpa_downloads": 1063298,
+    "melpa_rank": 86
+  },
+  {
+    "name": "projectile",
+    "category": "project",
+    "source": "melpa",
+    "version": "20260930.434",
+    "summary": "Manage and navigate projects in Emacs easily",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 3361403,
+    "melpa_rank": 10
+  },
+  {
+    "name": "treemacs",
+    "category": "project",
+    "source": "melpa",
+    "version": "20251226.1307",
+    "summary": "A tree style file explorer package",
+    "requires": [
+      "emacs",
+      "cl-lib",
+      "dash",
+      "s",
+      "ace-window",
+      "pfuture",
+      "hydra",
+      "ht",
+      "cfrs"
+    ],
+    "melpa_downloads": 1756792,
+    "melpa_rank": 35
+  },
+  {
+    "name": "treemacs-projectile",
+    "category": "project",
+    "source": "melpa",
+    "version": "20250320.2206",
+    "summary": "Projectile integration for treemacs",
+    "requires": [
+      "emacs",
+      "projectile",
+      "treemacs"
+    ],
+    "melpa_downloads": 686505,
+    "melpa_rank": 167
+  },
+  {
+    "name": "treemacs-icons-dired",
+    "category": "project",
+    "source": "melpa",
+    "version": "20250320.2145",
+    "summary": "Treemacs icons for dired",
+    "requires": [
+      "treemacs",
+      "emacs"
+    ],
+    "melpa_downloads": 519789,
+    "melpa_rank": 223
+  },
+  {
+    "name": "imenu-list",
+    "category": "project",
+    "source": "melpa",
+    "version": "20210420.1200",
+    "summary": "Show imenu entries in a separate buffer",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 610354,
+    "melpa_rank": 190
+  },
+  {
+    "name": "lsp-mode",
+    "category": "lsp",
+    "source": "melpa",
+    "version": "20261020.1728",
+    "summary": "LSP mode",
+    "requires": [
+      "emacs",
+      "dash",
+      "f",
+      "ht",
+      "spinner",
+      "markdown-mode",
+      "lv",
+      "eldoc"
+    ],
+    "melpa_downloads": 2603173,
+    "melpa_rank": 16
+  },
+  {
+    "name": "lsp-ui",
+    "category": "lsp",
+    "source": "melpa",
+    "version": "20260512.1516",
+    "summary": "UI modules for lsp-mode",
+    "requires": [
+      "emacs",
+      "dash",
+      "lsp-mode",
+      "markdown-mode"
+    ],
+    "melpa_downloads": 1125308,
+    "melpa_rank": 77
+  },
+  {
+    "name": "dap-mode",
+    "category": "lsp",
+    "source": "melpa",
+    "version": "20260616.1526",
+    "summary": "Debug Adapter Protocol mode",
+    "requires": [
+      "emacs",
+      "dash",
+      "lsp-mode",
+      "bui",
+      "f",
+      "s",
+      "lsp-treemacs",
+      "posframe",
+      "ht",
+      "lsp-docker"
+    ],
+    "melpa_downloads": 829596,
+    "melpa_rank": 150
+  },
+  {
+    "name": "eglot",
+    "category": "lsp",
+    "source": "melpa",
+    "version": "1.24",
+    "summary": "The Emacs Client for LSP servers",
+    "requires": [
+      "emacs",
+      "eldoc",
+      "external-completion",
+      "flymake",
+      "jsonrpc",
+      "project",
+      "seq",
+      "xref"
+    ],
+    "melpa_downloads": 146609,
+    "melpa_rank": 566
+  },
+  {
+    "name": "avy",
+    "category": "editing",
+    "source": "melpa",
+    "version": "0.5.0",
+    "summary": "Jump to arbitrary positions in visible text and select text quickly.",
+    "requires": [
+      "emacs",
+      "cl-lib"
+    ],
+    "melpa_downloads": 2549467,
+    "melpa_rank": 18
+  },
+  {
+    "name": "expand-region",
+    "category": "editing",
+    "source": "melpa",
+    "version": "1.0.0",
+    "summary": "Increase selected region by semantic units.",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1779195,
+    "melpa_rank": 34
+  },
+  {
+    "name": "multiple-cursors",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20260419.931",
+    "summary": "Multiple cursors for Emacs",
+    "requires": [
+      "emacs",
+      "cl-lib"
+    ],
+    "melpa_downloads": 1250940,
+    "melpa_rank": 62
+  },
+  {
+    "name": "iedit",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20251017.410",
+    "summary": "Edit multiple regions in the same way simultaneously",
+    "requires": [],
+    "melpa_downloads": 1406230,
+    "melpa_rank": 48
+  },
+  {
+    "name": "smartparens",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20260129.1214",
+    "summary": "Automatic insertion, wrapping and paredit-like navigation with user defined pairs",
+    "requires": [
+      "dash"
+    ],
+    "melpa_downloads": 2045397,
+    "melpa_rank": 28
+  },
+  {
+    "name": "paredit",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20241103.2046",
+    "summary": "Minor mode for editing parentheses",
+    "requires": [],
+    "melpa_downloads": 1096055,
+    "melpa_rank": 80
+  },
+  {
+    "name": "aggressive-indent",
+    "category": "editing",
+    "source": "melpa",
+    "version": "1.10.0",
+    "summary": "Minor mode to aggressively keep your code always indented",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1306472,
+    "melpa_rank": 56
+  },
+  {
+    "name": "ws-butler",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20250310.205",
+    "summary": "Unobtrusively remove trailing whitespace",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1003262,
+    "melpa_rank": 105
+  },
+  {
+    "name": "rainbow-delimiters",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20210515.1254",
+    "summary": "Highlight brackets according to their depth",
+    "requires": [],
+    "melpa_downloads": 1845195,
+    "melpa_rank": 33
+  },
+  {
+    "name": "goto-chg",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20240407.1110",
+    "summary": "Go to last change",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1589596,
+    "melpa_rank": 40
+  },
+  {
+    "name": "anzu",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20240929.201",
+    "summary": "Show number of matches in mode-line while searching",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1507541,
+    "melpa_rank": 41
+  },
+  {
+    "name": "hl-todo",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20261001.1547",
+    "summary": "Highlight TODO and similar keywords",
+    "requires": [
+      "emacs",
+      "compat",
+      "cond-let"
+    ],
+    "melpa_downloads": 1460373,
+    "melpa_rank": 43
+  },
+  {
+    "name": "symbol-overlay",
+    "category": "editing",
+    "source": "melpa",
+    "version": "20260703.1437",
+    "summary": "Highlight symbols with keymap-enabled overlays",
+    "requires": [
+      "emacs",
+      "seq"
+    ],
+    "melpa_downloads": 680507,
+    "melpa_rank": 168
+  },
+  {
+    "name": "ace-window",
+    "category": "editing",
+    "source": "melpa",
+    "version": "0.10.0",
+    "summary": "Quickly switch windows.",
+    "requires": [
+      "avy"
+    ],
+    "melpa_downloads": 2087636,
+    "melpa_rank": 25
+  },
+  {
+    "name": "markdown-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20261022.55",
+    "summary": "Major mode for Markdown-formatted text",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 3630303,
+    "melpa_rank": 7
+  },
+  {
+    "name": "web-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260831.219",
+    "summary": "Major mode for editing web templates",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1623142,
+    "melpa_rank": 39
+  },
+  {
+    "name": "yaml-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260830.2340",
+    "summary": "Major mode for editing YAML files",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1336664,
+    "melpa_rank": 52
+  },
+  {
+    "name": "js2-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20231224",
+    "summary": "Improved JavaScript editing mode",
+    "requires": [
+      "emacs",
+      "cl-lib"
+    ],
+    "melpa_downloads": 1335967,
+    "melpa_rank": 53
+  },
+  {
+    "name": "json-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "0.3.1",
+    "summary": "Major mode for editing JSON files",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 958428,
+    "melpa_rank": 114
+  },
+  {
+    "name": "rust-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260725.1442",
+    "summary": "A major-mode for editing Rust source code",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 941461,
+    "melpa_rank": 122
+  },
+  {
+    "name": "go-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260510.1707",
+    "summary": "Major mode for the Go programming language",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 755595,
+    "melpa_rank": 162
+  },
+  {
+    "name": "php-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260825.1535",
+    "summary": "Major mode for editing PHP code",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 640094,
+    "melpa_rank": 181
+  },
+  {
+    "name": "typescript-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20250118.2056",
+    "summary": "Major mode for editing typescript",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 621275,
+    "melpa_rank": 186
+  },
+  {
+    "name": "clojure-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260709.952",
+    "summary": "Major mode for Clojure code",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1015005,
+    "melpa_rank": 99
+  },
+  {
+    "name": "cider",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20261024.1139",
+    "summary": "Clojure Interactive Development Environment that Rocks",
+    "requires": [
+      "emacs",
+      "clojure-mode",
+      "compat",
+      "parseedn",
+      "queue",
+      "spinner",
+      "seq",
+      "sesman",
+      "transient"
+    ],
+    "melpa_downloads": 1172630,
+    "melpa_rank": 72
+  },
+  {
+    "name": "haskell-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260904.1042",
+    "summary": "A Haskell editing mode",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1015655,
+    "melpa_rank": 98
+  },
+  {
+    "name": "ess",
+    "category": "lang",
+    "source": "melpa",
+    "version": "26.5.0",
+    "summary": "Emacs Speaks Statistics",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 602073,
+    "melpa_rank": 192
+  },
+  {
+    "name": "elpy",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20260715.1747",
+    "summary": "Emacs Python Development Environment",
+    "requires": [
+      "company",
+      "emacs",
+      "highlight-indentation",
+      "pyvenv",
+      "yasnippet",
+      "s"
+    ],
+    "melpa_downloads": 519060,
+    "melpa_rank": 225
+  },
+  {
+    "name": "pyvenv",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20211014.707",
+    "summary": "Python virtual environment interface",
+    "requires": [],
+    "melpa_downloads": 870546,
+    "melpa_rank": 137
+  },
+  {
+    "name": "lua-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20250310.1150",
+    "summary": "A major-mode for editing Lua scripts",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 565234,
+    "melpa_rank": 203
+  },
+  {
+    "name": "dockerfile-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20251221.1644",
+    "summary": "Major mode for editing Docker's Dockerfiles",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 600636,
+    "melpa_rank": 193
+  },
+  {
+    "name": "cmake-mode",
+    "category": "lang",
+    "source": "melpa",
+    "version": "20261002.1529",
+    "summary": "Major-mode for editing CMake sources",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 468076,
+    "melpa_rank": 255
+  },
+  {
+    "name": "auctex",
+    "category": "lang",
+    "source": "gnu",
+    "version": "14.2.0",
+    "summary": "Integrated environment for *TeX*",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": null,
+    "melpa_rank": null
+  },
+  {
+    "name": "toc-org",
+    "category": "org",
+    "source": "melpa",
+    "version": "20260514.1415",
+    "summary": "Add table of contents to org-mode files (formerly, org-toc)",
+    "requires": [],
+    "melpa_downloads": 1060176,
+    "melpa_rank": 87
+  },
+  {
+    "name": "org-download",
+    "category": "org",
+    "source": "melpa",
+    "version": "20241118.1846",
+    "summary": "Image drag-and-drop for Org-mode",
+    "requires": [
+      "emacs",
+      "async"
+    ],
+    "melpa_downloads": 590007,
+    "melpa_rank": 195
+  },
+  {
+    "name": "org-pomodoro",
+    "category": "org",
+    "source": "melpa",
+    "version": "20220318.1618",
+    "summary": "Pomodoro implementation for org-mode",
+    "requires": [
+      "alert",
+      "cl-lib"
+    ],
+    "melpa_downloads": 636421,
+    "melpa_rank": 183
+  },
+  {
+    "name": "org-superstar",
+    "category": "org",
+    "source": "melpa",
+    "version": "20250914.1308",
+    "summary": "Prettify headings and plain lists in Org mode",
+    "requires": [
+      "org",
+      "emacs"
+    ],
+    "melpa_downloads": 509762,
+    "melpa_rank": 232
+  },
+  {
+    "name": "org-roam",
+    "category": "org",
+    "source": "melpa",
+    "version": "20260425.1623",
+    "summary": "A database abstraction layer for Org-mode",
+    "requires": [
+      "emacs",
+      "compat",
+      "org",
+      "emacsql",
+      "magit-section"
+    ],
+    "melpa_downloads": 504673,
+    "melpa_rank": 235
+  },
+  {
+    "name": "pdf-tools",
+    "category": "org",
+    "source": "melpa",
+    "version": "20260102.1101",
+    "summary": "Support library for PDF documents",
+    "requires": [
+      "emacs",
+      "tablist",
+      "let-alist"
+    ],
+    "melpa_downloads": 519843,
+    "melpa_rank": 222
+  },
+  {
+    "name": "nov",
+    "category": "org",
+    "source": "melpa",
+    "version": "20251213.1501",
+    "summary": "Featureful EPUB reader mode",
+    "requires": [
+      "esxml",
+      "emacs"
+    ],
+    "melpa_downloads": 196083,
+    "melpa_rank": 453
+  },
+  {
+    "name": "htmlize",
+    "category": "org",
+    "source": "melpa",
+    "version": "20250724.1703",
+    "summary": "Convert buffer text and decorations to HTML",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1271243,
+    "melpa_rank": 60
+  },
+  {
+    "name": "writeroom-mode",
+    "category": "org",
+    "source": "melpa",
+    "version": "20250204.2335",
+    "summary": "Minor mode for distraction-free writing",
+    "requires": [
+      "emacs",
+      "visual-fill-column"
+    ],
+    "melpa_downloads": 655313,
+    "melpa_rank": 176
+  },
+  {
+    "name": "olivetti",
+    "category": "org",
+    "source": "melpa",
+    "version": "20260524.213",
+    "summary": "Minor mode to automatically balance window margins",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 166643,
+    "melpa_rank": 514
+  },
+  {
+    "name": "devdocs",
+    "category": "org",
+    "source": "melpa",
+    "version": "0.7",
+    "summary": "Emacs viewer for DevDocs",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 492769,
+    "melpa_rank": 243
+  },
+  {
+    "name": "vterm",
+    "category": "term",
+    "source": "melpa",
+    "version": "20260914.1641",
+    "summary": "Fully-featured terminal emulator",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 606686,
+    "melpa_rank": 191
+  },
+  {
+    "name": "which-key",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "3.6.1",
+    "summary": "Display available keybindings in popup",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 2197152,
+    "melpa_rank": 22
+  },
+  {
+    "name": "hydra",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "0.15.0",
+    "summary": "Make bindings that stick around.",
+    "requires": [
+      "cl-lib",
+      "lv"
+    ],
+    "melpa_downloads": 2176949,
+    "melpa_rank": 23
+  },
+  {
+    "name": "use-package",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "2.4.6",
+    "summary": "A configuration macro for simplifying your .emacs",
+    "requires": [
+      "emacs",
+      "bind-key"
+    ],
+    "melpa_downloads": 2269288,
+    "melpa_rank": 21
+  },
+  {
+    "name": "evil",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260728.1438",
+    "summary": "Extensible vi layer",
+    "requires": [
+      "emacs",
+      "cl-lib",
+      "goto-chg",
+      "nadvice"
+    ],
+    "melpa_downloads": 2133602,
+    "melpa_rank": 24
+  },
+  {
+    "name": "evil-collection",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20261014.225",
+    "summary": "A set of keybindings for Evil mode",
+    "requires": [
+      "emacs",
+      "evil"
+    ],
+    "melpa_downloads": 845789,
+    "melpa_rank": 146
+  },
+  {
+    "name": "exec-path-from-shell",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260423.1833",
+    "summary": "Get environment variables such as $PATH from the shell",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1295741,
+    "melpa_rank": 58
+  },
+  {
+    "name": "editorconfig",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260118.718",
+    "summary": "EditorConfig Emacs Plugin",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 906563,
+    "melpa_rank": 128
+  },
+  {
+    "name": "yasnippet",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "0.14.3",
+    "summary": "Yet another snippet extension for Emacs",
+    "requires": [
+      "cl-lib",
+      "emacs"
+    ],
+    "melpa_downloads": 2534526,
+    "melpa_rank": 20
+  },
+  {
+    "name": "yasnippet-snippets",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20251215.1231",
+    "summary": "Collection of yasnippet snippets",
+    "requires": [
+      "yasnippet"
+    ],
+    "melpa_downloads": 942133,
+    "melpa_rank": 121
+  },
+  {
+    "name": "package-lint",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260903.2119",
+    "summary": "A linting library for elisp package authors",
+    "requires": [
+      "emacs",
+      "let-alist"
+    ],
+    "melpa_downloads": 1191945,
+    "melpa_rank": 68
+  },
+  {
+    "name": "dumb-jump",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260603.1700",
+    "summary": "Jump to definition for 60+ languages without configuration",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1242393,
+    "melpa_rank": 64
+  },
+  {
+    "name": "doom-modeline",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20261027.813",
+    "summary": "A minimal and modern mode-line",
+    "requires": [
+      "emacs",
+      "compat",
+      "nerd-icons",
+      "shrink-path"
+    ],
+    "melpa_downloads": 1072510,
+    "melpa_rank": 83
+  },
+  {
+    "name": "doom-themes",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260826.1413",
+    "summary": "An opinionated pack of modern color-themes",
+    "requires": [
+      "emacs",
+      "cl-lib"
+    ],
+    "melpa_downloads": 856270,
+    "melpa_rank": 143
+  },
+  {
+    "name": "zenburn-theme",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260901.1544",
+    "summary": "A low contrast color theme",
+    "requires": [],
+    "melpa_downloads": 757877,
+    "melpa_rank": 161
+  },
+  {
+    "name": "solarized-theme",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20261025.1447",
+    "summary": "The Solarized color theme",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 585351,
+    "melpa_rank": 197
+  },
+  {
+    "name": "modus-themes",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "5.3.0",
+    "summary": "Elegant, highly legible and customizable themes",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 471634,
+    "melpa_rank": 254
+  },
+  {
+    "name": "ef-themes",
+    "category": "workflow",
+    "source": "gnu",
+    "version": "2.2.1",
+    "summary": "Colorful and legible themes",
+    "requires": [
+      "emacs",
+      "modus-themes"
+    ],
+    "melpa_downloads": null,
+    "melpa_rank": null
+  },
+  {
+    "name": "all-the-icons",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20250527.927",
+    "summary": "A library for inserting Developer icons",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 1327672,
+    "melpa_rank": 55
+  },
+  {
+    "name": "page-break-lines",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260904.1100",
+    "summary": "Display ^L page breaks as tidy horizontal lines",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 554496,
+    "melpa_rank": 206
+  },
+  {
+    "name": "dashboard",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260809.447",
+    "summary": "A startup screen extracted from Spacemacs",
+    "requires": [
+      "emacs"
+    ],
+    "melpa_downloads": 384515,
+    "melpa_rank": 294
+  },
+  {
+    "name": "elfeed",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20261010.1010",
+    "summary": "An Atom/RSS feed reader",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 316469,
+    "melpa_rank": 338
+  },
+  {
+    "name": "elfeed-org",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20250219.950",
+    "summary": "Configure elfeed with one or more org-mode files",
+    "requires": [
+      "emacs",
+      "elfeed",
+      "org"
+    ],
+    "melpa_downloads": 74928,
+    "melpa_rank": 830
+  },
+  {
+    "name": "gptel",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20261018.848",
+    "summary": "Interact with ChatGPT or other LLMs",
+    "requires": [
+      "emacs",
+      "transient",
+      "compat"
+    ],
+    "melpa_downloads": 262529,
+    "melpa_rank": 382
+  },
+  {
+    "name": "helpful",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20250408.334",
+    "summary": "A better *help* buffer",
+    "requires": [
+      "emacs",
+      "dash",
+      "s",
+      "f",
+      "elisp-refs"
+    ],
+    "melpa_downloads": 383652,
+    "melpa_rank": 295
+  },
+  {
+    "name": "restclient",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20260627.1851",
+    "summary": "An interactive HTTP client for Emacs",
+    "requires": [
+      "emacs",
+      "compat"
+    ],
+    "melpa_downloads": 351183,
+    "melpa_rank": 318
+  },
+  {
+    "name": "paradox",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "20191011.1119",
+    "summary": "A modern Packages Menu. Colored, with package ratings, and customizable",
+    "requires": [
+      "emacs",
+      "seq",
+      "let-alist",
+      "spinner",
+      "hydra"
+    ],
+    "melpa_downloads": 1084249,
+    "melpa_rank": 82
+  },
+  {
+    "name": "undo-tree",
+    "category": "workflow",
+    "source": "melpa",
+    "version": "0.8.2",
+    "summary": "Treat undo history as a tree",
+    "requires": [
+      "queue"
+    ],
+    "melpa_downloads": 495073,
+    "melpa_rank": 241
+  }
+]

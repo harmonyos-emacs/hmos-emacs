@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "GNU Emacs for HarmonyOS"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "GNU Emacs"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Emacs"
+    }
+  ]
+}

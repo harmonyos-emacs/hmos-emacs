@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------------------
+# HarmonyOS / DevEco build outputs
+# ---------------------------------------------------------------------------
+/app/entry/build/
+/app/entry/.cxx/
+/app/build/
+/app/oh_modules/
+/app/entry/oh_modules/
+/app/.hvigor/
+/.hvigor/
+/app/local.properties
+/app/.clangd
+
+# Generated native libraries (rebuild with scripts/build-libemacs.sh)
+/app/entry/libs/**/*.so
+
+# Generated runtime bundles (rebuild with scripts/pack-runtime.sh and
+# scripts/pack-home-init.sh)
+/app/entry/src/main/resources/rawfile/emacs-runtime.tar.gz
+/app/entry/src/main/resources/rawfile/home-init.tar.gz
+
+# Emacs cross / host build trees
+/build-ohos/
+/build-host/
+
+# Local backups and scratch experiments
+/backup/
+
+# Signing material: never commit private keys, keystores or provisioning
+# profiles.  See refs/DEPLOY-README.md for how to provision them.
+*.p12
+*.p7b
+*.keystore
+*.csr
+refs/*.p12
+refs/*.p7b
+
+# Downloaded skills (restored from skills-lock.json)
+/.agents/skills/
+
+# Python / tooling caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editors and OS junk
+.vscode/
+.idea/
+*.iml
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Device-side / temporary artifacts
+*.hap
+*.hsp
+*.pdmp
+dump.stamp
+emacs-log.txt
+emacs-stderr.txt

@@ -1,0 +1,14 @@
+export const startEmacs: (args: string, envs: string, cwd: string, cols: number, rows: number) => number;
+export const readOutput: () => string;
+export const writeInput: (text: string) => number;
+export const resizeTerm: (cols: number, rows: number) => number;
+export const stopEmacs: () => number;
+export const state: () => string;
+export const startInstallRuntime: (fd: number, offset: number, length: number, tar: string, dir: string) => number;
+export const installState: () => string;
+export const runtimeReady: (path: string) => number;
+export const buildId: () => string;
+export const libemacsVersion: () => string;
+export const fileRead: (path: string) => string;
+export const fileWrite: (path: string, text: string) => number;
+export const fileRemove: (path: string) => number;
